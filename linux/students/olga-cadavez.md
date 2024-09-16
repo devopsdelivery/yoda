@@ -77,7 +77,7 @@ ubuntu $ ls /bin /sbin
 
 10.List all the files (including hidden files) in your home directory in a human readable format
 
-ls - h
+ls -h
 
 11.Create a directory linuxlab in your home directory
 
@@ -90,7 +90,12 @@ mkdir ~/textlinuxdir
 
 13.Create in one command the directories hierarchy ~/dir1/dir2/dir3 inside the diretory textlinuxdir.
 
-mkdir /textlinuxdir/dir1/dir2/dir3
+$ mkdir -p ~/textlinuxdir/dir1/dir2/dir3
+ubuntu $ cd textlinuxdir/
+ubuntu $ cd dir1/
+ubuntu $ ll
+ubuntu $ cd dir2/
+ubuntu $ ll
 
 
 14.Remove the directory testlinuxdir
