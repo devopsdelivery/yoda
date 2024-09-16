@@ -148,22 +148,31 @@ ubuntu $
 
 6. Rename the file postgres_newusers.sql to postgres_oldusers.sql.
 
-
+mv postgres_newusers.sql postgres_oldusers.sql
    
 7.Create a directory ~/touched and enter it.
 
 mkdir ~/touched
-cd ~touched
+cd touched/
 
 8. Create the files today.txt and yesterday.txt in touched.
 
    touch today.txt  yesterday.txt
+ubuntu $ ll
+total 8
+drwxr-xr-x 2 root root 4096 Sep 16 16:12 ./
+drwx------ 7 root root 4096 Sep 16 16:09 ../
+-rw-r--r-- 1 root root    0 Sep 16 16:12 today.txt
+-rw-r--r-- 1 root root    0 Sep 16 16:12 yesterday.txt
    
 9. Change the creation date on yesterday.txt to match yesterday's date.
 
   touch -d 
     
-Copy yesterday.txt to copy.yesterday.txt.
-Create a directory called ~/testbackup and copy all files from ~/touched in it.
-Use one command to remove the directory ~/testbackup and all files in it.
-Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
+10.Copy yesterday.txt to copy.yesterday.txt.
+
+11.Create a directory called ~/testbackup and copy all files from ~/touched in it.
+
+12.Use one command to remove the directory ~/testbackup and all files in it.
+
+13.Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
