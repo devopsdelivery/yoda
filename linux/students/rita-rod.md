@@ -37,4 +37,12 @@ cd ~/touched
 
 touch today.txt yesterday.txt
 
-touch -d
+touch -d "yesterday" yesterday.txt
+
+cp yesterday.text copy_yesterday.txt
+
+mkdir ~/testbackup
+cp ~/touched/ ~/testbackup
+
+rm -r ~/testbackuo
+
