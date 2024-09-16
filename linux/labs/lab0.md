@@ -8,6 +8,10 @@ In order to register your steps and answers to the different exercises that are 
 1. Clone this repository to your laptop
 
 ```
+git clone https://github.com/devopsdelivery/yoda.git
+```
+or
+```
 git clone git@github.com:devopsdelivery/yoda.git
 ```
 
