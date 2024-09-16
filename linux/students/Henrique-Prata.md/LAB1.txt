@@ -36,7 +36,7 @@ Change to the /etc directory, stay here and create a directory testlinuxdir in y
 cd /etc | mkdir /home testlnuxdir
 
 Create in one command the directories hierarchy ~/dir1/dir2/dir3 inside the diretory textlinuxdir.
-mkdir -p ~/textlinuxdir,dir1,dir2
+mkdir -p ~/textlinuxdir/dir1/dir2
 
 Remove the directory testlinuxdir
 rm /textlinuxdir
