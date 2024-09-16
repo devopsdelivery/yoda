@@ -2,8 +2,9 @@
 Lab01
 
 1. What is the user that you logged in?
-whoami
-
+```
+1. whoami
+```
 2. Display your current directory.
 pwd
 
