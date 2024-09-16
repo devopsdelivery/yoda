@@ -1,0 +1,43 @@
+What is the user that you logged in?
+root
+
+Display your current directory.
+pwd
+
+Change to the /etc directory
+cd etc/
+
+Now change to your home directory using only 3 key presses.
+cd ~
+
+Go to the parent directory of the current directory.
+cd ..
+
+Go to the root directory and list its content.
+cd / | ls 
+
+List a long listing of the root directory.
+ls -l
+
+Stay where you are, and list the contents of /etc.
+ls | ls /etc
+
+Stay where you are, and list the contents of /bin and /sbin.
+ls /bin | ls /sbin
+
+List all the files (including hidden files) in your home directory in a human readable format
+ls -ha
+
+Create a directory linuxlab in your home directory
+cd /home
+mkdir linuxlab
+
+Change to the /etc directory, stay here and create a directory testlinuxdir in your home directory
+cd /etc | mkdir /home testlnuxdir
+
+Create in one command the directories hierarchy ~/dir1/dir2/dir3 inside the diretory textlinuxdir.
+mkdir -p ~/textlinuxdir,dir1,dir2
+
+Remove the directory testlinuxdir
+rm /textlinuxdir
+
