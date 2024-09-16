@@ -60,5 +60,5 @@ mkdir -p ~/textlinuxdir/dir1/dir2/dir3
 
 14. Remove the directory `testlinuxdir`
 
-rm -rf testlinuxdir
+rm -rf ~/testlinuxdir
 
