@@ -102,18 +102,136 @@ dir1  linuxlab  yoda
 </details>
 
 
-## Exercises LAB2
+<details>
+<summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB2</summary>
 
-1. Download the file `postgres_users.sql` (https://github.com/devopsdelivery/yoda/blob/natixis-academy/linux/files/postgres_users.sql) with the command `wget`.
+1. Download the file `postgres_users.sql` (https://github.com/devopsdelivery/yoda/blob/main/natixis-academy/linux/files/postgres_users.sql) with the command `wget`.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/yoda/linux/students]
+└─$ wget "https://github.com/devopsdelivery/yoda/tree/jhon/linux/files/postgres_users.sql"
+--2024-09-16 16:10:26--  https://github.com/devopsdelivery/yoda/tree/jhon/linux/files/postgres_users.sql
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://github.com/devopsdelivery/yoda/blob/jhon/linux/files/postgres_users.sql [following]
+--2024-09-16 16:10:27--  https://github.com/devopsdelivery/yoda/blob/jhon/linux/files/postgres_users.sql
+Reusing existing connection to github.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘postgres_users.sql’
+
+postgres_users.     [  <=>] 165.19K   625KB/s    in 0.3s    
+
+2024-09-16 16:10:27 (625 KB/s) - ‘postgres_users.sql’ saved [169154]
+```
 2. Display the size and type of file of `postgres_users.sql`. 
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/yoda/linux/students]
+└─$ file postgres_users.sql && du -h postgres_users.sql 
+postgres_users.sql: HTML document, Unicode text, UTF-8 text, with very long lines (1616)
+168K    postgres_users.sql
+```
+
 3. Display the type of file of `postgres_users.sql`.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/yoda/linux/students]
+└─$ file -b postgres_users.sql 
+HTML document, Unicode text, UTF-8 text, with very long lines (1616)
+```
+
 4. Move the file `postgres_users.sql` to the directory `/linuxlab`.  
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/yoda/linux/students]
+└─$ mv postgres_users.sql ~/linuxlab
+```
+
 5. Create a copy of the file `postgres_users.sql` with the name `postgres_newusers.sql`.
+```
+
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxlab]
+└─$ cp postgres_users.sql postgres_newusers.sql
+```
 6. Rename the file `postgres_newusers.sql` to `postgres_oldusers.sql`.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxlab]
+└─$ mv postgres_newusers.sql postgres_oldusers.sql
+```
+
 7. Create a directory `~/touched` and enter it.
-8. Create the files `today.txt` and `yesterday.txt` in touched.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxlab]
+└─$ mkdir -p ~/touched && cd ~/touched && pwd
+/home/sopa/touched
+```
+
+8. Create the files `today.txt` and `yesterday.txt` in `touched`.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/touched]
+└─$ touch today.txt yesterday.txt && ls 
+today.txt  yesterday.txt
+```
+
 9. Change the creation date on `yesterday.txt` to match yesterday's date.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/touched]
+└─$ touch -t $(date -d "2024-09-15 00:00" +"%Y%m%d%H%M") yesterday.txt && ls -l yesterday.txt 
+-rw-r--r-- 1 sopa sopa 0 Sep 15 00:00 yesterday.txt
+```
+
 10. Copy `yesterday.txt` to `copy.yesterday.txt`.
-11. Create a directory called `~/testbackup` and copy all files from `~/touched` in it.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/touched]
+└─$ cp yesterday.txt copy.yesterday.txt && ls *yes*
+copy.yesterday.txt  yesterday.txt
+```
+
+11. Create a directory called `~/testbackup` and copy all files from `~/touched` into it.
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~]
+└─$ mkdir -p ~/testbackup && cp -rf touched/* ~/testbackup && ls ~/testbackup
+copy.yesterday.txt  today.txt  yesterday.txt
+```
+
 12. Use one command to remove the directory `~/testbackup` and all files in it.
-13. Create a directory `~/etcbackup` and copy all *.conf files from `/etc` in it. Did you include all subdirectories of `/etc`?
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~]
+└─$ rm -rf ~/testbackup && ls ~/testbackup
+ls: cannot access '/home/sopa/testbackup': No such file or directory
+```
+
+13. Create a directory `~/etcbackup` and copy all *.conf files from `/etc` into it. Did you include all subdirectories of `/etc`?
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~]
+└─$ mkdir -p ~/etcbackup && cp -rf /etc/*.conf ~/etcbackup
+
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~]
+└─$ ls -la ~/etcbackup/
+total 100
+drwxr-xr-x  2 sopa sopa 4096 Sep 16 16:59 .
+drwx------ 12 sopa sopa 4096 Sep 16 16:59 ..
+-rw-r--r--  1 sopa sopa 3386 Sep 16 16:59 adduser.conf
+-rw-r--r--  1 sopa sopa 6288 Sep 16 16:59 ca-certificates.conf
+-rw-r--r--  1 sopa sopa 2967 Sep 16 16:59 debconf.conf
+-rw-r--r--  1 sopa sopa 1706 Sep 16 16:59 deluser.conf
+-rw-r--r--  1 sopa sopa  685 Sep 16 16:59 e2scrub.conf
+-rw-r--r--  1 sopa sopa 2584 Sep 16 16:59 gai.conf
+-rw-r--r--  1 sopa sopa    9 Sep 16 16:59 host.conf
+-rw-r--r--  1 sopa sopa   34 Sep 16 16:59 ld.so.conf
+-rw-r--r--  1 sopa sopa  191 Sep 16 16:59 libaudit.conf
+-rw-r--r--  1 sopa sopa  494 Sep 16 16:59 logrotate.conf
+-rw-r--r--  1 sopa sopa  813 Sep 16 16:59 mke2fs.conf
+-rwxr-xr-x  1 sopa sopa  243 Sep 16 16:59 nftables.conf
+-rw-r--r--  1 sopa sopa  494 Sep 16 16:59 nsswitch.conf
+-rw-r--r--  1 sopa sopa  552 Sep 16 16:59 pam.conf
+lrwxrwxrwx  1 sopa sopa   20 Sep 16 16:59 resolv.conf -> /mnt/wsl/resolv.conf
+-rw-r--r--  1 sopa sopa 4343 Sep 16 16:59 sudo.conf
+-rw-r--r--  1 sopa sopa 9804 Sep 16 16:59 sudo_logsrvd.conf
+-rw-r--r--  1 sopa sopa 1260 Sep 16 16:59 ucf.conf
+-rw-r--r--  1 sopa sopa  583 Sep 16 16:59 updatedb.conf
+lrwxrwxrwx  1 sopa sopa   16 Sep 16 16:59 vconsole.conf -> default/keyboard
+-rw-r--r--  1 sopa sopa  681 Sep 16 16:59 xattr.conf
+
+```
+
+</details>
+
