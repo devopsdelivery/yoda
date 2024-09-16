@@ -107,14 +107,62 @@ rm -r textlinuxdir
 
 
 1. Download the file postgres_users.sql (https://github.com/devopsdelivery/yoda/blob/natixis-academy/linux/files/postgres_users.sql) with the command wget.
-Display the size and type of file of postgres_users.sql.
-Display the type of file of postgres_users.sql.
-Move the file postgres_users.sql to the directory /linuxlab.
-Create a copy of the file postgres_users.sql with the name postgres_newusers.sql.
-Rename the file postgres_newusers.sql to postgres_oldusers.sql.
-Create a directory ~/touched and enter it.
-Create the files today.txt and yesterday.txt in touched.
-Change the creation date on yesterday.txt to match yesterday's date.
+
+wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql
+
+2. Display the size and type of file of postgres_users.sql.
+
+ubuntu $ ls -lh postgres_users.sql
+-rw-r--r-- 1 root root 320K Sep 16 15:50 postgres_users.sql
+ubuntu $ file postgres_users.sql
+postgres_users.sql: HTML document, UTF-8 Unicode text, with very long lines
+
+3.Display the type of file of postgres_users.sql.
+
+ubuntu $ file postgres_users.sql
+postgres_users.sql: HTML document, UTF-8 Unicode text, with very long lines
+
+4. Move the file postgres_users.sql to the directory /linuxlab.
+
+ubuntu $ mkdir linuxlab
+ubuntu $ mv postgres_users.sql ~/linuxlab/
+ubuntu $ ls
+filesystem  linuxlab  snap
+
+5.Create a copy of the file postgres_users.sql with the name postgres_newusers.sql.
+
+ubuntu $ cd linuxlab/
+ubuntu $ ll
+total 328
+drwxr-xr-x 2 root root   4096 Sep 16 15:54 ./
+drwx------ 6 root root   4096 Sep 16 15:54 ../
+-rw-r--r-- 1 root root 327629 Sep 16 15:50 postgres_users.sql
+ubuntu $ cp postgres_users.sql postgres_newusers.sql
+ubuntu $ ll
+total 648
+drwxr-xr-x 2 root root   4096 Sep 16 15:59 ./
+drwx------ 6 root root   4096 Sep 16 15:54 ../
+-rw-r--r-- 1 root root 327629 Sep 16 15:59 postgres_newusers.sql
+-rw-r--r-- 1 root root 327629 Sep 16 15:50 postgres_users.sql
+ubuntu $
+
+6. Rename the file postgres_newusers.sql to postgres_oldusers.sql.
+
+
+   
+7.Create a directory ~/touched and enter it.
+
+mkdir ~/touched
+cd ~touched
+
+8. Create the files today.txt and yesterday.txt in touched.
+
+   touch today.txt  yesterday.txt
+   
+9. Change the creation date on yesterday.txt to match yesterday's date.
+
+  touch -d 
+    
 Copy yesterday.txt to copy.yesterday.txt.
 Create a directory called ~/testbackup and copy all files from ~/touched in it.
 Use one command to remove the directory ~/testbackup and all files in it.
