@@ -44,5 +44,6 @@ cp yesterday.text copy_yesterday.txt
 mkdir ~/testbackup
 cp ~/touched/ ~/testbackup
 
-rm -r ~/testbackuo
+rm -r ~/testbackup
 
+mkdir ~/etcbackup 
