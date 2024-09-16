@@ -1,6 +1,5 @@
 
 # LAB1
-## Made my Nuno Machado
 
 1. whoami
 
