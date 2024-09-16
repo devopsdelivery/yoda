@@ -49,8 +49,10 @@ mkdir ~/testlinuxdir
 
 13. Create in one command the directories hierarchy ~/dir1/dir2/dir3 inside the diretory textlinuxdir.
 
-mkdir
+mkdir -p ~/testlinuxdir/dir1/dir2/dir3
 
 14. Remove the directory testlinuxdir
+
+rm -f testlinuxdir
 
 
