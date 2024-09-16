@@ -1,1 +1,11 @@
-Your README file should have the formar: FirsName_LastName.md
+1 - whoami 
+2 - pwd
+3 - cd /etc 
+cd
+cd ..
+cd   / ls
+ls -l
+ls /etc
+ls /bin /sbin
+ls-h
+mkdir /linuxlab
