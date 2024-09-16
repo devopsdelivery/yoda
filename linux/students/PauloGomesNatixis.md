@@ -1,4 +1,4 @@
-# Linux basics LAB1
+# Linux basics LAB1 #
 
 Welcome to the Linux basics laboratory. We prepared some exercises to improve your Linux knowledge.
 
@@ -7,10 +7,11 @@ Welcome to the Linux basics laboratory. We prepared some exercises to improve yo
 Do the next exercises per order.
 
 1. What is the user that you logged in?
-# whoami
+
+whoami
 
 2. Display your current directory.
-cd ~
+
 pwd
 
 3. Change to the `/etc` directory
