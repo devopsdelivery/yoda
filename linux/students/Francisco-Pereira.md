@@ -1,4 +1,4 @@
-LAB-1
+##--- LAB1 ---
 1-What is the user that you logged in?
 ```
 1-whoami
@@ -58,7 +58,8 @@ LAB-1
 
 
 
-LAB-2	
+##--- LAB2 ---
+
 1-Download the file postgres_users.sql (https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql) with the command wget.
 ```
 1-wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql
@@ -101,13 +102,13 @@ LAB-2
 ```
 11-Create a directory called ~/testbackup and copy all files from ~/touched in it.
 ```
-11-...
+11-mkdir -p  ~/testbackup && cp -rf  ~/touched/* ~/testbackup
 ```
 12-Use one command to remove the directory ~/testbackup and all files in it.
 ```
-12-...
+12-rm -rf ~/testbackup/
 ```
 13-Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
 ```
-13-...
+13-mkdir ~/etcbackup && cp /etc/*.conf ~/etcbackup
 ```
