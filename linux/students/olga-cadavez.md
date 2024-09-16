@@ -37,3 +37,5 @@ ubuntu $ ls
 filesystem  snap  yoda
 
 7.List a long listing of the root directory.
+
+
