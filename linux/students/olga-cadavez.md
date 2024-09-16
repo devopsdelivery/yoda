@@ -97,8 +97,25 @@ ubuntu $ ll
 ubuntu $ cd dir2/
 ubuntu $ ll
 
-
 14.Remove the directory testlinuxdir
 
 rm -r textlinuxdir
 
+
+
+#LAB02
+
+
+1. Download the file postgres_users.sql (https://github.com/devopsdelivery/yoda/blob/natixis-academy/linux/files/postgres_users.sql) with the command wget.
+Display the size and type of file of postgres_users.sql.
+Display the type of file of postgres_users.sql.
+Move the file postgres_users.sql to the directory /linuxlab.
+Create a copy of the file postgres_users.sql with the name postgres_newusers.sql.
+Rename the file postgres_newusers.sql to postgres_oldusers.sql.
+Create a directory ~/touched and enter it.
+Create the files today.txt and yesterday.txt in touched.
+Change the creation date on yesterday.txt to match yesterday's date.
+Copy yesterday.txt to copy.yesterday.txt.
+Create a directory called ~/testbackup and copy all files from ~/touched in it.
+Use one command to remove the directory ~/testbackup and all files in it.
+Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
