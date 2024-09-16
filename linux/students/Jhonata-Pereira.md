@@ -1,3 +1,5 @@
+## DBA Academy LABs
+
 <details>
 <summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB1</summary>
 
@@ -235,3 +237,94 @@ lrwxrwxrwx  1 sopa sopa   16 Sep 16 16:59 vconsole.conf -> default/keyboard
 
 </details>
 
+<details>
+<summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB3</summary>
+
+1. Display the first 12 lines of `/etc/services`.
+```
+└─$ head -n 12 /etc/services | nl
+```
+
+2. Display the last line of `/etc/passwd`.
+```
+└─$ tail -n 1 /etc/passwd
+```
+
+3. Create a file named `count.txt`.
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ touch count.txt
+```
+
+4. Use cp to make a backup of this file to `cnt.txt`. 
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ cp count.txt cnt.txt
+&& diff count.txt cnt.txt # command to test it
+```
+
+5. Use more to display `/var/log/syslog`
+```
+more /var/log/syslog # */syslog does not exist here
+```
+
+6. Use ls to find the two biggest file in `/etc`.
+```
+└─$ ls -lS /etc/ | head -n 3 | tail -n 2
+```
+
+</details>
+
+<details>
+<summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB4</summary>
+
+1. List all files in `/etc` ending with “.conf”.
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ ls -a /etc/*.conf
+```
+
+2. List all commands in `/bin` starting with “mk”.
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ ls -a /bin/mk*
+```
+
+3. List all commands in `/bin` containing digits.
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ ls -a /bin/*[0-9]*
+```
+
+4. List all directories in `/etc` containing digits. 
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ ls -da /etc/*[0-9]*
+```
+
+5. List all files in `/boot` with name containing a dot (“.”) or a dash (“-”).
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ ls -a /boot/ | grep [.-]
+```
+
+
+</details>
+
+
+<details>
+<summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB5</summary>
+
+1. Write the current date to the file `/~/tmp/now` (hint: use the date command)
+```
+┌──[sopa㉿Marla]-[sopa]
+└─$ date | cat > /tmp/now
+```
+
+2. Copy the content of the file `/etc/services` to `/~/tmp/services` without using the commands “cp”, “mv” and “rm”.
+
+3. Sort all `/proc` directory content by line, and filter output to only display lines beginning with a digit (hint: use `grep ^[0-9]` and sort(1)). 
+
+4. List the filesystem root directory `/` content by line, and filter output to replace all consonants with the character “_” (hint: use `sed -e 's,[!aeiouy],_,g'`)
+
+</details>
