@@ -426,4 +426,22 @@ postgres=# \list
 (3 rows)
 
 ```
+
+### Extra:
+```
+template1=# \c template1 
+You are now connected to database "template1" as user "postgres".
+template1=# select * from users;
+ user_id |   username   |          email           |     password      |         created_at         
+---------+--------------+--------------------------+-------------------+----------------------------
+       1 | john_doe     | john.doe@example.com     | hashed_password_1 | 2024-09-17 11:58:23.029908
+       2 | jane_smith   | jane.smith@example.com   | hashed_password_2 | 2024-09-17 11:58:23.029908
+       3 | goncalo      | goncalo@natixis.com      | imgay_password    | 2024-09-17 11:58:23.029908
+       4 | alice_wonder | alice.wonder@example.com | hashed_password_3 | 2024-09-17 11:58:23.029908
+(4 rows)
+
+template1=# 
+
+```
+
 </details>

@@ -1,4 +1,4 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     user_id SERIAL PRIMARY KEY,  -- Auto-incrementing ID
     username VARCHAR(50) NOT NULL UNIQUE,  -- Unique username
     email VARCHAR(100) NOT NULL UNIQUE,  -- Unique email
