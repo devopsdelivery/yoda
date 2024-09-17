@@ -216,7 +216,7 @@ ls /proc | grep '^[0-9]' | sort -V
 
 4. List the filesystem root directory `/` content by line, and filter output to replace all consonants with the character “_” (hint: use `sed -e 's,[!aeiouy],_,g'`)
 
-ls / | sed -e 's,[^aeiouyAEIOU],_,g'
+ls / | sed -e 's,[^aeiouyAEIOUY],_,g'
 
 
 ***
