@@ -62,10 +62,8 @@ mkdir -p ~/textlinuxdir/dir1/dir2/dir3
 
 rm -rf ~/testlinuxdir
 
-========================================================
 
 
-***
 ***
 
 
@@ -132,7 +130,6 @@ YES
 
 
 ***
-***
 
 
 # Linux basics LAB3
@@ -165,9 +162,9 @@ more /var/log/syslog
 
 ls -lhS /etc | grep ^- | head -n 2
 
-***
-***
 
+
+***
 
 # Linux basics LAB4
 
@@ -197,6 +194,8 @@ ls -al /boot/\*[.-]\*
 
 
 
+***
+
 # Linux basics LAB5
 
 ## Exercises
@@ -209,4 +208,3 @@ Do the next exercises per order.
 4. List the filesystem root directory `/` content by line, and filter output to replace all consonants with the character “_” (hint: use `sed -e 's,[!aeiouy],_,g'`)
 
 
-Next step: [Lab6](lab6.md)
