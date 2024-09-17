@@ -111,3 +111,14 @@ ll -d /etc/*[0-9]*
 5. List all files in /boot with name containing a dot (“.”) or a dash (“-”).
 
  ls -a /boot | grep '[.-]'
+
+---------------------------------------------------------------------------------------------------------------------
+LAB5
+---------------------------------------------------------------------------------------------------------------------
+1.Write the current date to the file /~/tmp/now (hint: use the date command)
+
+date > /tmp/now
+
+2. Copy the content of the file /etc/services to /~/tmp/services without using the commands “cp”, “mv” and “rm”.
+
+mkdir -p ~/tmp && cat /etc/services > ~/tmp/services
