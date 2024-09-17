@@ -50,3 +50,9 @@
 9. touch -d "yesterday" yesterday.txt
 
 10. cp yesterday.txt copy.yesterday.txt
+
+11. mkdir -p  ~/testbackup && cp -rf  ~/touched/* ~/testbackup
+
+12. rm -rf ~/testbackup/
+
+13. mkdir ~/etcbackup && cp /etc/*.conf ~/etcbackup
