@@ -5,7 +5,9 @@ Lab01
 whoami
 
 2. Display your current directory.
+```
 pwd
+```
 
 3. Change to the `/etc` directory
 cd /etc
