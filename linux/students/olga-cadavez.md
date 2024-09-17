@@ -285,6 +285,7 @@ ubuntu $ nano services
    
 3. Sort all /proc directory content by line, and filter output to only display lines beginning with a digit (hint: use grep ^[0-9] and sort(1)).
 
+ubuntu $ ls /proc | grep '^[0-9]' | sort
 
 4. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[!aeiouy],_,g')
 
