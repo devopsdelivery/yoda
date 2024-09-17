@@ -181,3 +181,58 @@
 ```
 4-ls /root/ | sed -e 's,[aeiouy],_,g'
 ```
+
+
+##--- LAB6 ---
+1-In your home directory create the directory /linuxdatabase.
+```
+1-mkdir linuxdatabase
+```
+2-Create the the file create_users_table.
+```
+2-touch create_users_table
+```
+3-Insert the content in the file create_table_users.sql into the file create_users_table (use the nano editor).
+```
+3-cat create_table_users.sql >> /root/linuxdatabase/create_users_table
+```
+4-Create the the file insert_users_table.
+```
+4-touch /root/linuxdatabase/insert_users_table
+```
+5-Insert the content in the file insert_table_users.sql into the file insert_users_table (use the nano editor).
+```
+5-cat insert_table_users.sql > /root/linuxdatabase/insert_users_table 
+```
+6-Add the files create_users_table and insert_users_table to a tar archive with the name dbscripts.tar.
+```
+6-tar -cvf dbscripts.tar create_users_table insert_users_table
+```
+7-Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.
+```
+7-tar -xf dbscripts.tar -C /root/extracted_dbscripts
+```
+8-List all the apt packages installed in your system.
+```
+8-apt list --installed
+```
+9-Update the apt list.
+```
+9-sudo apt update 
+```
+10-Install Postgres in your system.
+```
+10-sudo apt install postgresql-client
+```
+11-Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+```
+11-systemctl status postgresql
+```
+12-Install the Postgres client.
+```
+12-
+```
+13-Using the Postgres client (psql) connect to the Postgres server and list the databases.
+```
+13-
+```
