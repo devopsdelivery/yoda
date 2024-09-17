@@ -255,3 +255,36 @@ ubuntu $ ls /boot/*[.-]*
 
 #LAB 05
 
+1. Write the current date to the file /~/tmp/now (hint: use the date command)
+
+ubuntu $ date > now.txt
+ubuntu $ nano now.txt
+ubuntu $ cd 
+ubuntu $ pwd
+/root
+ubuntu $ mkdir tmp
+ubuntu $ date > now.txt
+ubuntu $ nano now.txt 
+ubuntu $ ls
+filesystem  now.txt  snap  tmp  yoda
+ubuntu $ mv now.txt tmp/now.txt
+ubuntu $ ls
+filesystem  snap  tmp  yoda
+ubuntu $ cd tmp/
+ubuntu $ ls
+now.txt
+
+2. Copy the content of the file /etc/services to /~/tmp/services without using the commands “cp”, “mv” and “rm”.
+
+ubuntu $ pwd                 
+/root/tmp
+ubuntu $ cat /etc/services > services
+ubuntu $ ls
+now.txt  services
+ubuntu $ nano services 
+   
+3. Sort all /proc directory content by line, and filter output to only display lines beginning with a digit (hint: use grep ^[0-9] and sort(1)).
+
+
+4. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[!aeiouy],_,g')
+
