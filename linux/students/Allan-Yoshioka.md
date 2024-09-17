@@ -166,3 +166,114 @@ more -d /var/log/syslog
 ````
 ls -S /etc | head -n 2
 ````
+
+# Lab 4 
+
+1. List all files in `/etc` ending with “.conf”.
+````
+ls /etc/*.conf
+````
+2. List all commands in `/bin` starting with “mk”.
+````
+ls /bin/mk*
+````
+3. List all commands in `/bin` containing digits.
+````
+ls /bin/*[0-9]*
+````
+4. List all directories in `/etc` containing digits. 
+````
+ls /etc/*[0-9]*/
+## another option ls /bin/ | grep [0-9]
+````
+5. List all files in `/boot` with name containing a dot (“.”) or a dash (“-”).
+````
+ls  /boot/*[.-]*
+````
+
+# Lab 5
+
+1. Write the current date to the file `/~/tmp/now` (hint: use the date command)
+`````
+date +"Year: %Y, Month: %m, Day: %d" > now.txt
+`````
+
+2. Copy the content of the file `/etc/services` to `/~/tmp/services` without using the commands “cp”, “mv” and “rm”.
+````
+rsync -a /etc/services /~/tmp
+````
+
+3. Sort all `/proc` directory content by line, and filter output to only display lines beginning with a digit (hint: use `grep ^[0-9]` and sort(1)). 
+````
+ ls -d -v /proc/*[0-9]* 
+````
+
+4. List the filesystem root directory `/` content by line, and filter output to replace all consonants with the character “_” (hint: use `sed -e 's,[!aeiouy],_,g'`)
+````
+ls -l / | sed -e 's,[!aeiouy],_,g'
+````
+
+# lab 6
+
+1. In your home directory create the directory `/linuxdatabase`.
+````
+ mkdir ~/home/linuxdatabase
+````
+
+2. Create the the file `create_users_table`.
+````
+touch create_users_table.txt
+````
+
+3. Insert the content in the file [create_table_users.sql](/files/create_table_users.sql) into the file `create_users_table` (use the nano editor).
+````
+cp create_table_users.sql create_users_table.txt 
+````
+
+4. Create the the file `insert_users_table`.
+````
+touch insert_users_table.txt
+````
+
+5. Insert the content in the file [insert_table_users.sql](/files/create_table_users.sql) into the file `insert_users_table` (use the nano editor).
+````
+cp insert_table_users.sql insert_user_table.txt 
+````
+
+6. Add the files `create_users_table` and `insert_users_table` to a tar archive with the name `dbscripts.tar`. 
+`````
+tar -cf dbscripts.tar \create_users_table.txt \insert_users_table.txt
+``````
+
+7. Extract the files from the tar archive `dbscripts.tar` to the directory `extracted_dbscripts`.
+``````
+tar -xf dbscripts.tar -C \extracted_dbscripts
+``````
+
+8. List all the apt packages installed in your system.
+``````
+apt list --installed
+``````
+9.  Update the apt list.
+``````
+sudo apt update
+``````
+10. Install Postgres in your system.
+``````
+sudo apt install postgresql
+``````
+11. Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+``````
+systemctl status postgres.service
+``````
+
+12. Install the Postgres client.
+``````
+sudo apt install postgresql-cli
+``````
+
+13. Using the Postgres client (`psql`) connect to the Postgres server and list the databases. 
+``````
+sudo -u postgres psql
+\lists
+``````
