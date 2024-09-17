@@ -1,6 +1,5 @@
-
 LAB1
-**
+
 **1. What is the user that you logged in?**
 
 whoami
@@ -114,20 +113,60 @@ ll -d /etc/\*[0-9]\*
 ---------------------------------------------------------------------------------------------------------------------
 LAB5
 ---------------------------------------------------------------------------------------------------------------------
-1.Write the current date to the file /~/tmp/now (hint: use the date command)
+**1.Write the current date to the file /~/tmp/now (hint: use the date command)**
 
 date > /tmp/now
 
-2. Copy the content of the file /etc/services to /~/tmp/services without using the commands “cp”, “mv” and “rm”.
+**2. Copy the content of the file /etc/services to /~/tmp/services without using the commands “cp”, “mv” and “rm”.**
 
 cat /etc/services > /tmp/services
 
-3. Sort all /proc directory content by line, and filter output to only display lines beginning with a digit (hint: use grep ^[0-9] and sort(1)).
+**3. Sort all /proc directory content by line, and filter output to only display lines beginning with a digit (hint: use grep ^[0-9] and sort(1)).**
 
 ls /proc | grep '^[0-9]' | sort -V
 
-6. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[^aeiouy],_,g')
+**6. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[^aeiouy],_,g')**
 
 ls / | sed -e 's,[^aeiouy],_,g'
+---------------------------------------------------------------------------------------------------------------------
+LAB6
+---------------------------------------------------------------------------------------------------------------------
+**1.In your home directory create the directory /linuxdatabase.**
+
+mkdir linuxdatabase
+
+**2. Create the the file create_users_table.**
+
+touch create_users_table
+
+**3.Insert the content in the file create_table_users.sql into the file create_users_table**
+
+through VIM
+
+**4.Create the the file insert_users_table.**
+
+touch insert_users_table
+
+**6. Add the files create_users_table and insrt_users_table to a tar archive with the name dbscripts.tar.
+tar -cvf dbscripts.tar create_users_table insrt_users_table**
+
+tar -cvf dbscripts.tar create_users_table insert_users_table
 
 
+**7. Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.**
+
+mkdir -p extracted_dbscripts && tar -xvf dbscripts.tar -C extracted_dbscripts
+
+**8. List all the apt packages installed in your system.**
+
+dpkg --list
+
+**9.Update the apt list.**
+
+sudo apt update
+
+**10.Install Postgres in your system.**
+
+apt update postgresql
+
+**11.Check if the Postgres service (postgres.service) is running (hit: use systemctl).**
