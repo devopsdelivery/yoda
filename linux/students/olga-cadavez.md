@@ -309,12 +309,38 @@ nano ~/create_users_table
 
 touch ~insert_users_table
    
-Insert the content in the file insert_table_users.sql into the file insert_users_table (use the nano editor).
-Add the files create_users_table and insert_users_table to a tar archive with the name dbscripts.tar.
-Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.
-List all the apt packages installed in your system.
-Update the apt list.
-Install Postgres in your system.
-Check if the Postgres service (postgres.service) is running (hit: use systemctl).
-Install the Postgres client.
-Using the Postgres client (psql) connect to the Postgres server and list the databases.
+5. Insert the content in the file insert_table_users.sql into the file insert_users_table (use the nano editor).
+
+nano ~/insert_table_users.sql
+
+6. Add the files create_users_table and insert_users_table to a tar archive with the name dbscripts.tar.
+
+tar -cvf dbscripts.tar ~/create_users_table ~/insert_users_table
+
+7. Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.
+
+mkdir ~/extracted_dbscripts tar -xvf dbscripts.tar -c ~/extracted_dbscripts
+
+8. List all the apt packages installed in your system.
+
+dpkg --get-selections
+
+9.Update the apt list.
+
+sudo apt update
+
+10.Install Postgres in your system.
+
+sudo apt install postgresql
+
+11.Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+
+sudo systemctl status postgresql
+
+12.Install the Postgres client.
+
+sudo apt install postgresql-client
+
+13.Using the Postgres client (psql) connect to the Postgres server and list the databases.
+
+psql -U postgres -l
