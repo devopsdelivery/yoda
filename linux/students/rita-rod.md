@@ -48,3 +48,36 @@ rm -r ~/testbackup
 
 mkdir ~/etcbackup 
 cp /etc/*.cong ~/etcbackup/
+
+
+
+
+
+LAB3:
+
+head -n 12 /etc/services
+
+ tail head -n 1 /etc/passwd
+
+ touch count.txt
+
+ cp count.txt cnt.txt
+
+ more /var/log/syslog
+
+ ls -S /etc | head -n 2
+
+
+
+ LAB 4:
+ 
+ls /etc/`.conf
+
+ls /bin/mk*
+
+ls /bin/*[0-9]*
+
+ls -d /etc/*[0-9]*/
+
+ls /boot/*[.-]*
+ 
