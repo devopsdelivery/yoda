@@ -92,5 +92,22 @@ ls -lhS /etc
 ---------------------------------------------------------------------------------------------------------------------
 LAB4
 ---------------------------------------------------------------------------------------------------------------------
+1. List all files in /etc ending with “.conf”.
 
+ll -f /etc/*.conf
 
+2.List all commands in /bin starting with “mk”.
+
+ll /bin/mk*
+
+3.List all commands in /bin containing digits.
+
+ll /bin/*[0-9]*
+
+4.List all directories in /etc containing digits.
+
+ll -d /etc/*[0-9]*
+
+5. List all files in /boot with name containing a dot (“.”) or a dash (“-”).
+
+ ls -a /boot | grep '[.-]'
