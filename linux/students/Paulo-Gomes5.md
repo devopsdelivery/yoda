@@ -65,6 +65,9 @@ rm -rf ~/testlinuxdir
 ========================================================
 
 
+***
+***
+
 
 
 # Linux basics LAB2
@@ -128,6 +131,8 @@ find /etc -type f -name '*.conf' -exec cp --parents {} ~/etcbackup \;
 YES
 
 
+***
+***
 
 
 # Linux basics LAB3
@@ -160,8 +165,8 @@ more /var/log/syslog
 
 ls -lhS /etc | grep ^- | head -n 2
 
-#####
-#####
+***
+***
 
 
 # Linux basics LAB4
