@@ -186,3 +186,7 @@ drwx------ 7 root root 4096 Sep 16 16:09 ../
 
  mkdir ~/etcbackup 
  cp/etc/*.conf ~/etcbackup 
+
+
+#LAB 03
+
