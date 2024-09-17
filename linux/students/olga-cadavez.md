@@ -253,3 +253,5 @@ ubuntu $ ls -d /etc/*[0-9]*/
 ubuntu $ ls /boot/*[.-]*
 /boot/System.map-5.4.0-131-generic  /boot/initrd.img                    /boot/initrd.img.old             /boot/vmlinuz.old
 
+#LAB 05
+
