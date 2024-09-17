@@ -71,7 +71,7 @@ head -n 12 /etc/services
 
  LAB 4:
  
-ls /etc/`.conf
+ls /etc/*.conf
 
 ls /bin/mk*
 
@@ -80,4 +80,16 @@ ls /bin/*[0-9]*
 ls -d /etc/*[0-9]*/
 
 ls /boot/*[.-]*
+
+
+ LAB 5:
+
+ date > /tmp/now
+
+ cat /etc/services > /tmp/services
+
+ ls /proc | grep '^[0-9]' | sort
+
+ ???
+
  
