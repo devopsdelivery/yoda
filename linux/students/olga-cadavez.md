@@ -167,7 +167,7 @@ drwx------ 7 root root 4096 Sep 16 16:09 ../
    
 9. Change the creation date on yesterday.txt to match yesterday's date.
 
-  touch -d 
+  touch -d "yesterday" yesterday.txt
     
 10.Copy yesterday.txt to copy.yesterday.txt.
 
