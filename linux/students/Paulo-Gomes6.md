@@ -125,7 +125,7 @@ rm -rf ~/testbackup
 
 13. Create a directory `~/etcbackup` and copy all *.conf files from `/etc` in it. Did you include all subdirectories of `/etc`?
 
-find /etc -type f -name '*.conf' -exec cp --parents {} ~/etcbackup \;
+find /etc -type f -name '*.conf' -exec cp --parents {} ~/etcbackup \\;
 YES
 
 
