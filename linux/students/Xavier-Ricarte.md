@@ -165,6 +165,7 @@ LAB-4
 ```
 
 LAB-5
+
 1-Write the current date to the file /~/tmp/now (hint: use the date command)
 ```
 1-date >> /root/tmp/now
