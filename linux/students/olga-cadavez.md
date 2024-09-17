@@ -190,3 +190,28 @@ drwx------ 7 root root 4096 Sep 16 16:09 ../
 
 #LAB 03
 
+1. Display the first 12 lines of /etc/services.
+
+ ubuntu $ cd /etc
+ ubuntu $ head -n 12 services 
+
+ obs.: ubuntu $ file services 
+services: ASCII text
+ubuntu $ man head 
+ubuntu $ head services 
+
+2. Display the last line of /etc/passwd.
+
+ ubuntu $ pwd 
+/etc
+ubuntu $ tail -n 1 passwd
+dnsmasq:x:113:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+
+3.Create a file named count.txt.
+
+touch count.txt 
+
+Use cp to make a backup of this file to cnt.txt.
+Use more to display /var/log/syslog
+Use ls to find the two biggest file in /etc.
+
