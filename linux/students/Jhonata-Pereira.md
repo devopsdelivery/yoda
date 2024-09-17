@@ -310,7 +310,7 @@ lrwxrwxrwx  1 sopa sopa   16 Sep 16 16:59 vconsole.conf -> default/keyboard
 
 1. Write the current date to the file `/~/tmp/now` (hint: use the date command)
 ```
-└─$ date | cat > ~/tmp/now
+└─$ date > ~/tmp/now
 ```
 
 2. Copy the content of the file `/etc/services` to `/~/tmp/services` without using the commands “cp”, “mv” and “rm”.
@@ -325,6 +325,91 @@ ls /proc | sort | grep ^[0-9]
 
 4. List the filesystem root directory `/` content by line, and filter output to replace all consonants with the character “_” (hint: use `sed -e 's,[!aeiouy],_,g'`)
 ```
-ls -1 / | sed -e 's,[!aeiouAEIOU],_,g'
+└─$ ls / | sed -e 's,[^aeiouAEIOU],_,g'
+```
+</details>
+
+<details>
+<summary style="font-size: 1.5em; font-weight: bold;">Exercises LAB6</summary>
+
+1. In your home directory create the directory `/linuxdatabase`.
+```
+└─$ mkdir ~/linuxdatabase
+```
+
+2. Create the the file `create_users_table`.
+```
+└─$ touch ~/linuxdatabase/create_users_table
+```
+
+3. Insert the content in the file [create_table_users.sql](/files/create_table_users.sql) into the file `create_users_table`.
+```
+└─$ cat ~/yoda/linux/files/insert_table_users.sql > ~/linuxdatabase/create_users_table
+```
+
+4. Create the the file `insert_users_table`.
+```
+```
+
+5. Insert the content in the file [insert_table_users.sql](/files/create_table_users.sql) into the file `insert_users_table` (use the nano editor).
+```
+└─$ cp ~/yoda/linux/files/create_table_users.sql ~/linuxdatabase/insert_users_table
+```
+
+6. Add the files `create_users_table` and `insrt_users_table` to a tar archive with the name `dbscripts.tar`. 
+```
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxdatabase]
+└─$ tar -cf dbscripts.tar  *users_table*
+
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxdatabase]
+└─$ tar -tf dbscripts.tar 
+create_users_table
+insert_users_table
+
+┌──(sopa㉿DESKTOP-MAPFS0I)-[~/linuxdatabase]
+└─$ 
+
+```
+
+7. Extract the files from the tar archive `dbscripts.tar` to the directory `extracted_dbscripts`.
+```
+└─$ tar -xf dbscripts.tar  
+```
+
+8. List all the apt packages installed in your system.
+```
+└─$ dpkg --list
+```
+
+9. Update the apt list.
+```
+└─$ sudo apt update
+```
+
+10. Install Postgres in your system.
+```
+└─$ sudo apt install postgresql -y
+```
+
+11. Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+```
+└─$ systemctl status postgresql.service
+postgresql.service - PostgreSQL RDBMS
+    Loaded: loaded (/usr/lib/systemd/system/postgresql.service, disabled)
+    Active: inactive (dead)
+```
+
+12. Install the Postgres client.
+```
+└─$ sudo apt install postgresql-client -y
+```
+
+13. Using the Postgres client (`psql`) connect to the Postgres server and list the databases. 
+```
+└─$ sudo service postgresql start && sudo service postgresql status
+Starting PostgreSQL 16 database server: main.
+16/main (port 5432): online
+
+
 ```
 </details>
