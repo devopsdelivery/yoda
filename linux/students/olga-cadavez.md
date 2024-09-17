@@ -4,7 +4,7 @@
 
 1.What is the user that you logged in?
 
-ubuntu $ whoami
+ubuntu $ whoami 100
 root
 
 2.Display your current directory.
