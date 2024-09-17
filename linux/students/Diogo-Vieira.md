@@ -102,11 +102,11 @@ ll /bin/mk*
 
 3.List all commands in /bin containing digits.
 
-ll /bin/*[0-9]*
+ll /bin/\*[0-9]\*
 
 4.List all directories in /etc containing digits.
 
-ll -d /etc/*[0-9]*
+ll -d /etc/\*[0-9]\*
 
 5. List all files in /boot with name containing a dot (“.”) or a dash (“-”).
 
