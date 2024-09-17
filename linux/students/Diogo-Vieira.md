@@ -1,7 +1,7 @@
 ***
 LAB1
 ***
-**1. What is the user that you logged in?**
+#**1. What is the user that you logged in?**
 
 whoami
 
@@ -61,9 +61,9 @@ rm -f testlinuxdir
 ***
 LAB2
 ***
-
+***
 LAB3
----------------------------------------------------------------------------------------------------------------------
+***
 **1. Display the first 12 lines of /etc/services.**
 
  head -n 12 /etc/services
@@ -88,9 +88,9 @@ cp count.txt ./cnt.txt
 
 ls -lhS /etc
 
----------------------------------------------------------------------------------------------------------------------
+***
 LAB4
----------------------------------------------------------------------------------------------------------------------
+***
 **1. List all files in /etc ending with “.conf”.**
 
 ll -f /etc/*.conf
@@ -111,9 +111,9 @@ ll -d /etc/\*[0-9]\*
 
  ls -a /boot | grep '[.-]'
 
----------------------------------------------------------------------------------------------------------------------
+***
 LAB5
----------------------------------------------------------------------------------------------------------------------
+***
 **1.Write the current date to the file /~/tmp/now (hint: use the date command)**
 
 date > /tmp/now
@@ -129,9 +129,9 @@ ls /proc | grep '^[0-9]' | sort -V
 **6. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[^aeiouy],_,g')**
 
 ls / | sed -e 's,[^aeiouy],_,g'
----------------------------------------------------------------------------------------------------------------------
+***
 LAB6
----------------------------------------------------------------------------------------------------------------------
+***
 **1.In your home directory create the directory /linuxdatabase.**
 
 mkdir linuxdatabase
