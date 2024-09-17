@@ -100,11 +100,16 @@ ls -S /etc | head -n 2
 Lab 4 
 
 List all files in /etc ending with “.conf”.
+ls /etc/*.conf
 
 List all commands in /bin starting with “mk”.
+ls /bin/mk*
 
 List all commands in /bin containing digits.
+ls /bin/*[0-9]*
 
 List all directories in /etc containing digits.
+ls -d /etc/[0-9]/
 
 List all files in /boot with name containing a dot (“.”) or a dash (“-”).
+ls /boot/[.-]
