@@ -234,19 +234,19 @@ mkdir ~/linuxdatabase
 
 2. Create the the file `create_users_table`.
 
-touch create_users_table
+touch ~/linuxdatabase/create_users_table
 
 3. Insert the content in the file [create_table_users.sql](/files/create_table_users.sql) into the file `create_users_table` (use the nano editor).
 
-vim create_users_table
+vim ~/linuxdatabase/create_users_table
 
 4. Create the the file `insert_users_table`.
 
-touch insert_users_table
+touch ~/linuxdatabase/insert_users_table
 
 5. Insert the content in the file [insert_table_users.sql](/files/create_table_users.sql) into the file `insert_users_table` (use the nano editor).
 
-vim insert_users_table
+vim ~/linuxdatabase/insert_users_table
 
 6. Add the files `create_users_table` and `insrt_users_table` to a tar archive with the name `dbscripts.tar`. 
 
@@ -280,7 +280,7 @@ sudo apt install postgresql-client
 
 13. Using the Postgres client (`psql`) connect to the Postgres server and list the databases.
 
-psql -c "\l"
+sudo -u postgres psql -c "\l"
 
 
 
