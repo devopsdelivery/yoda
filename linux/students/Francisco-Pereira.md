@@ -112,3 +112,72 @@
 ```
 13-mkdir ~/etcbackup && cp /etc/*.conf ~/etcbackup
 ```
+
+
+##--- LAB3 ---
+1-Display the first 12 lines of /etc/services.
+```
+1-head -12 services
+```
+2-Display the last line of /etc/passwd.
+```
+2-tail -1 passwd
+```
+3-Create a file named count.txt.
+```
+3-touch count.txt
+```
+4-Use cp to make a backup of this file to cnt.txt.
+```
+4-cp count.txt cnt.txt
+```
+5-Use more to display /var/log/syslog
+```
+5-more /var/log/syslog
+```
+6-Use ls to find the two biggest file in /etc.
+```
+6-ls -lSh /etc | head -3
+```
+
+
+
+##--- LAB4 ---
+1-List all files in /etc ending with “.conf”.
+```
+1-ls /etc/*conf
+```
+2-List all commands in /bin starting with “mk”.
+```
+2-ls /bin/mk*
+```
+3-List all commands in /bin containing digits.
+```
+3-ls /bin/*[0-9]*
+```
+4-List all directories in /etc containing digits.
+```
+4-ls -d /etc/*[0-9]*/
+```
+5-List all files in /boot with name containing a dot (“.”) or a dash (“-”).
+```
+5-ls /boot/*[.-]*
+```
+
+##--- LAB5 ---
+1-Write the current date to the file /~/tmp/now (hint: use the date command)
+```
+1-date >> /root/tmp/now
+```
+2-Copy the content of the file /etc/services to /~/tmp/services without using the commands “cp”, “mv” and “rm”.
+```
+2-cat services > /root/tmp/services
+```
+3-Sort all /proc directory content by line, and filter output to only display lines beginning with a digit (hint: use grep ^[0-9] and sort(1)).
+```
+3-ls /proc/ | grep ^[0-9] |sort
+```
+4-List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[!aeiouy],_,g')
+```
+4-ls /root/ | sed -e 's,[aeiouy],_,g'
+```
