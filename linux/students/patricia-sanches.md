@@ -127,4 +127,54 @@ Sort all /proc directory content by line, and filter output to only display line
 ls /proc | grep '^[0-9]' | sort
 
 List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[!aeiouy],_,g')
+sed -e 's/[âeiouAEIOU]/ _/g'
 
+-------------------------------------------------------------------------------------//-------------------------------------------------------------------------------------------------------------------------------------
+
+Lab 6
+
+In your home directory create the directory /linuxdatabase.
+mkdir linuxdatabase/
+
+Create the the file create_users_table.
+touch ~/linuxdatabase/create_users_table.sql
+
+Insert the content in the file create_table_users.sql into the file create_users_table (use the nano editor).
+nano ~/create_table_users.sql
+nano ~/create_users_table.sql
+Ctrl + O
+
+Create the the file insert_users_table.
+touch ~/linuxdatabase/insert_users_table.sql
+
+Insert the content in the file insert_table_users.sql into the file insert_users_table (use the nano editor).
+nano ~/insert_table_users.sql
+nano ~/insert_users_table.sql
+Ctrl + O
+
+Add the files create_users_table and insrt_users_table to a tar archive with the name dbscripts.tar.
+tar -cvf dbscripts.tar ~/
+create_users_table ~/
+insert_users_table
+
+Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.
+mkdir ~extracted_dbcripts
+tar -xvf dbscripsts.tar -C ~/extracted_dbscripts
+
+List all the apt packages installed in your system.
+dpkg --get-selections
+
+Update the apt list.
+sudo apt update
+
+Install Postgres in your system.
+sudo apt install postgresql
+
+Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+sudo systemctl status postgresql-client
+
+Install the Postgres client.
+sudo apt install postgresql-client
+
+Using the Postgres client (psql) connect to the Postgres server and list the databases.
+psql -U postgres -I
