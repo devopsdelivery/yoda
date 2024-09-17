@@ -1,5 +1,6 @@
-What is the user that you logged in?
+==========================================LAB1==========================================
 
+What is the user that you logged in?
 root
 
 Display your current directory.
@@ -43,7 +44,7 @@ Remove the directory testlinuxdir
 rm /textlinuxdir
 
 
-====================================================================================
+==========================================LAB2==========================================
 
 
 Download the file postgres_users.sql (https://github.com/devopsdelivery/yoda/blob/natixis-academy/linux/files/postgres_users.sql) with the command wget.
@@ -84,3 +85,41 @@ rm -rf testbackup/
 
 Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
 mkdir etcbackup | find /etc -type f -name '*.conf' -exec cp --parents {} root/etcbackup/ \;
+
+==========================================LAB3==========================================
+
+Display the first 12 lines of /etc/services.
+top -n 12 /etc/services 
+
+Display the last line of /etc/passwd.
+tail -n 1 /etc/passwd
+
+Create a file named count.txt.
+touch count.txt
+
+Use cp to make a backup of this file to cnt.txt.
+cp count.txt cnt.txt
+
+Use more to display /var/log/syslog
+more /var/log/syslog
+
+Use ls to find the two biggest file in /etc.
+du /etc/ | sort -nr | head -n2
+
+==========================================LAB4==========================================
+
+List all files in /etc ending with ".conf".
+find /etc/ -name '*.conf'
+
+List all commands in /bin starting with "mk".
+find /bin/ -name 'mk*'
+
+List all commands in /bin containing digits.
+ls /bin/ | grep [0-9]
+
+List all directories in /etc containing digits.
+cd /etc/
+ls -d */ | grep [0-9]
+
+List all files in /boot with name containing a dot (".") or a dash ("-").
+find /boot/ -name '*.*' -o -name '*-*'
