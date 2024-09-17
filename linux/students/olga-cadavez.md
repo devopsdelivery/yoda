@@ -171,8 +171,18 @@ drwx------ 7 root root 4096 Sep 16 16:09 ../
     
 10.Copy yesterday.txt to copy.yesterday.txt.
 
+   cp yesterday.txt to copy.yesterday.txt
+
 11.Create a directory called ~/testbackup and copy all files from ~/touched in it.
+
+   mkdir ~/testbackup
+   cp ~/youched/* -/testbackup/
 
 12.Use one command to remove the directory ~/testbackup and all files in it.
 
+  rm -r ~/testbackup
+
 13.Create a directory ~/etcbackup and copy all *.conf files from /etc in it. Did you include all subdirectories of /etc?
+
+ mkdir ~/etcbackup 
+ cp/etc/*.conf ~/etcbackup 
