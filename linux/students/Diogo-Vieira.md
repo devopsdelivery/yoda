@@ -170,3 +170,19 @@ sudo apt update
 apt update postgresql
 
 **11.Check if the Postgres service (postgres.service) is running (hit: use systemctl).**
+
+systemctl status postgresql
+(must be super user)
+
+**12. Install the Postgres client.**
+
+sudo apt update (good practice before applying installation)
+
+sudo apt install postgresql-client
+
+sudo dnf install postgresql (red hat systems)
+
+**13 Using the Postgres client (psql) connect to the Postgres server and list the databases.**
+
+sudo -u postgres psql -c '\l'
+
