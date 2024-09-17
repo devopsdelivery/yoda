@@ -101,7 +101,7 @@ rename postgres_newusers.sql postgres_oldusers.sql
 
 7. Create a directory `~/touched` and enter it.
 
-mkdir ~/touched
+mkdir ~/touched && cd ~/touched
 
 8. Create the files `today.txt` and `yesterday.txt` in touched.
 
