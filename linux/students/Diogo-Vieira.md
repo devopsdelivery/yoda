@@ -65,11 +65,37 @@ LAB2
 
 wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql
 
-**2.Display the size and type of file of postgres_users.sql.**
+**2. Display the size and type of file of postgres_users.sql.**
 
 ls -lh postgres_users.sql
 
 file postgres_users.sql
+
+**3. Display the type of file of postgres_users.sql**
+
+file postgres_users.sql
+
+**4. Move the file postgres_users.sql to the directory /linuxlab.**
+
+mkdir -p /linuxlab
+sudo mv postgres_users.sql /linuxlab/
+**5. Create a copy of the file postgres_users.sql with the name postgres_newusers.sql**
+
+sudo cp postgres_users.sql postgres_newusers.sql
+
+**6. Rename the file postgres_newusers.sql to postgres_oldusers.sql.**
+
+sudo mv postgres_newusers.sql postgres_oldusers.sql
+
+**7.Create a directory ~/touched and enter it.**
+
+touch d touched
+
+**8. Create the files today.txt and yesterday.txt in touched.**
+
+touch touched/today.txt touched/yesterday.txt
+
+**9.Change the modification date on yesterday.txt to match yesterday's date.**
 
 ***
 LAB3
