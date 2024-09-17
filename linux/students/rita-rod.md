@@ -47,3 +47,4 @@ cp ~/touched/ ~/testbackup
 rm -r ~/testbackup
 
 mkdir ~/etcbackup 
+cp /etc/*.cong ~/etcbackup/
