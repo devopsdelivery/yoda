@@ -223,3 +223,33 @@ dnsmasq:x:113:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
 
    ubuntu $ ls -S /etc | head -n 2
 
+#LAB 04
+
+1. List all files in /etc ending with “.conf”.
+
+   ubuntu $ ls /etc/*.conf
+
+2. List all commands in /bin starting with “mk”.
+
+   ubuntu $ ls /bin/mk*
+   
+3. List all commands in /bin containing digits.
+
+ubuntu $ ls /bin | grep [0-9]
+addr2line
+automat-visualize3
+b2sum
+base32
+base64
+......
+   
+4. List all directories in /etc containing digits.
+
+ubuntu $ ls -d /etc/*[0-9]*/
+/etc/X11/     /etc/iproute2/  /etc/polkit-1/   /etc/python3/  /etc/rc1.d/  /etc/rc3.d/  /etc/rc5.d/  /etc/udisks2/
+
+5. List all files in /boot with name containing a dot (“.”) or a dash (“-”).
+   
+ubuntu $ ls /boot/*[.-]*
+/boot/System.map-5.4.0-131-generic  /boot/initrd.img                    /boot/initrd.img.old             /boot/vmlinuz.old
+
