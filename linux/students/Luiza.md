@@ -182,3 +182,33 @@ more /var/log/syslog
 ```
 ls -S /etc | head -n 2
 ´´´
+
+Linux basics LAB4
+
+## Exercises
+
+
+1. List all files in `/etc` ending with “.conf”.
+```
+ls /etc/*.conf
+```
+
+2. List all commands in `/bin` starting with “mk”.
+```
+ls /bin/mk*
+```
+
+3. List all commands in `/bin` containing digits.
+```
+ls /bin/*[0-9]*
+```
+
+4. List all directories in `/etc` containing digits. 
+```
+ls /etc/*[0-9]*
+```
+5. List all files in `/boot` with name containing a dot (“.”) or a dash (“-”).
+```
+ls -a /boot/*(.|-)* 
+```
+
