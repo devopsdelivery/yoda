@@ -1,4 +1,9 @@
+#!/bin/bash
+
+current_date=$(date + "%y-%m-%d")
+
+
 git add .
-git commit -m "4º lab commit"
+git commit -m "Labs commit on $current_date"
 git push -f
 
