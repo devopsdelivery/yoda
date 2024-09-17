@@ -160,6 +160,8 @@ more /var/log/syslog
 
 ls -lhS /etc | grep ^- | head -n 2
 
+#####
+#####
 
 
 # Linux basics LAB4
