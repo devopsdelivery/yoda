@@ -67,6 +67,10 @@ wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users
 
 **2.Display the size and type of file of postgres_users.sql.**
 
+ls -lh postgres_users.sql
+
+file postgres_users.sql
+
 ***
 LAB3
 ***
