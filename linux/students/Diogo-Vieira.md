@@ -61,6 +61,12 @@ rm -f testlinuxdir
 ***
 LAB2
 ***
+**1.Download the file postgres_users.sql (https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql) with the command wget.**
+
+wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users.sql
+
+**2.Display the size and type of file of postgres_users.sql.**
+
 ***
 LAB3
 ***
