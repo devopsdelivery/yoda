@@ -254,7 +254,7 @@ tar -cvf dbscripts.tar linuxdatabase/create_users_table linuxdatabase/insrt_user
 
 7. Extract the files from the tar archive `dbscripts.tar` to the directory `extracted_dbscripts`.
 
-mkdir extracted_dbscripts && tar -xvf dbscripts.tar -C extracted_dbscripts
+mkdir ~/extracted_dbscripts && tar -xvf dbscripts.tar -C ~/extracted_dbscripts
 
 
 8. List all the apt packages installed in your system.
