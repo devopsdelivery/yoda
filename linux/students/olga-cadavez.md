@@ -209,9 +209,17 @@ dnsmasq:x:113:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
 
 3.Create a file named count.txt.
 
-touch count.txt 
+   ubuntu $  touch count.txt 
 
-Use cp to make a backup of this file to cnt.txt.
-Use more to display /var/log/syslog
-Use ls to find the two biggest file in /etc.
+4. Use cp to make a backup of this file to cnt.txt.
+
+   ubuntu $  cp count.txt cnt.txt
+   
+5.Use more to display /var/log/syslog
+
+ ubuntu $  more /var/log/syslog
+
+6. Use ls to find the two biggest file in /etc.
+
+   ubuntu $ ls -S /etc | head -n 2
 
