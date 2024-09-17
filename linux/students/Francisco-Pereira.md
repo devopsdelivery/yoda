@@ -222,7 +222,7 @@
 ```
 10-Install Postgres in your system.
 ```
-10-sudo apt install postgresql-client
+10-sudo apt install postgresql
 ```
 11-Check if the Postgres service (postgres.service) is running (hit: use systemctl).
 ```
@@ -230,9 +230,10 @@
 ```
 12-Install the Postgres client.
 ```
-12-
+12-sudo apt install postgresql-client
 ```
 13-Using the Postgres client (psql) connect to the Postgres server and list the databases.
 ```
-13-
+13-sudo -u postgres psql
+   \l
 ```
