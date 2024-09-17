@@ -1,5 +1,6 @@
+***
 LAB1
-
+***
 **1. What is the user that you logged in?**
 
 whoami
@@ -63,46 +64,46 @@ LAB2
 
 LAB3
 ---------------------------------------------------------------------------------------------------------------------
-1. Display the first 12 lines of /etc/services.
+**1. Display the first 12 lines of /etc/services.**
 
  head -n 12 /etc/services
 
-2.Display the last line of /etc/passwd.
+**2.Display the last line of /etc/passwd.**
 
 tail -n 1 /etc/passwd
 
-3. Create a file named count.txt.
+**3. Create a file named count.txt.**
 
 touch count.txt
 
-4. Use cp to make a backup of this file to cnt.txt.
+**4. Use cp to make a backup of this file to cnt.txt.**
    
 cp count.txt ./cnt.txt
 
-5. Use more to display /var/log/syslog
+**5. Use more to display /var/log/syslog**
    
  more /var/log/syslog
  
-6.Use ls to find the two biggest file in /etc.
+**6.Use ls to find the two biggest file in /etc.**
 
 ls -lhS /etc
 
 ---------------------------------------------------------------------------------------------------------------------
 LAB4
 ---------------------------------------------------------------------------------------------------------------------
-1. List all files in /etc ending with “.conf”.
+**1. List all files in /etc ending with “.conf”.**
 
 ll -f /etc/*.conf
 
-2.List all commands in /bin starting with “mk”.
+**2.List all commands in /bin starting with “mk”.**
 
 ll /bin/mk*
 
-3.List all commands in /bin containing digits.
+**3.List all commands in /bin containing digits.**
 
 ll /bin/\*[0-9]\*
 
-4.List all directories in /etc containing digits.
+**4.List all directories in /etc containing digits.**
 
 ll -d /etc/\*[0-9]\*
 
