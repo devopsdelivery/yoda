@@ -92,4 +92,34 @@ ls /boot/*[.-]*
 
  ???
 
- 
+ LAB 6:
+
+mkdir ~/linuxdatabase
+
+touch ~/create_users_table
+
+nano ~/create_users_table
+
+touch ~/insert_users_table
+
+nano ~/insert_users_table
+
+tarv -cvf dbscripts.tar ~/
+create_users_table~/
+insert_users_table
+
+mkdir ~/extracted_dbscripts
+tar -xvf dbscripts.tar -C ~/
+extracted_dbscripts
+
+dpkg --get-selections
+
+sudo apt update
+
+sudo apt install postgresql
+
+sudo systemctl status postgresql
+
+sudo apt install postgresql-client
+
+psql -U postgres -l
