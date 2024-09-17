@@ -289,3 +289,20 @@ ubuntu $ ls /proc | grep '^[0-9]' | sort
 
 4. List the filesystem root directory / content by line, and filter output to replace all consonants with the character “_” (hint: use sed -e 's,[!aeiouy],_,g')
 
+..................................
+
+# LAB 06
+
+In your home directory create the directory /linuxdatabase.
+Create the the file create_users_table.
+Insert the content in the file create_table_users.sql into the file create_users_table (use the nano editor).
+Create the the file insert_users_table.
+Insert the content in the file insert_table_users.sql into the file insert_users_table (use the nano editor).
+Add the files create_users_table and insert_users_table to a tar archive with the name dbscripts.tar.
+Extract the files from the tar archive dbscripts.tar to the directory extracted_dbscripts.
+List all the apt packages installed in your system.
+Update the apt list.
+Install Postgres in your system.
+Check if the Postgres service (postgres.service) is running (hit: use systemctl).
+Install the Postgres client.
+Using the Postgres client (psql) connect to the Postgres server and list the databases.
