@@ -11,7 +11,7 @@ wget https://github.com/devopsdelivery/yoda/blob/main/linux/files/postgres_users
 
 2. Display the size and type of file of `postgres_users.sql`. 
 ```
-
+file postgres_users.sql && du -h postgres_users.sql 
 ```
 
 3. Display the type of file of `postgres_users.sql`.
@@ -44,9 +44,30 @@ mkdir touched
 touch today.txt && touch yesterday.txt
 ```
 9. Change the creation date on `yesterday.txt` to match yesterday's date.
+```
+touch -t 202409150000 yesterday.txt
+```
+
+
 10. Copy `yesterday.txt` to `copy.yesterday.txt`.
+```
+cp yesterday.txt copy.yesterday.txt
+```
+
 11. Create a directory called `~/testbackup` and copy all files from `~/touched` in it.
+```
+mkdir ~/testbackup && cp ~/touched/* ~/testbackup 
+```
+
 12. Use one command to remove the directory `~/testbackup` and all files in it.
+```
+rm -rf ~/testbackup/
+```
+
 13. Create a directory `~/etcbackup` and copy all *.conf files from `/etc` in it. Did you include all subdirectories of `/etc`?
+```
+mkdir ~/etcbackup && cp /etc/*.conf ~/etcbackup 
+```
+
 
 Next step: [Lab3](lab3.md)
