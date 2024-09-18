@@ -70,3 +70,26 @@ total 4
 -rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file1.txt
 -rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file2.txt
 -rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file3.txt
+
+
+
+## Bash Scripting LAB4
+
+#! /bin/sh
+
+
+USAGE_PERCENTAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+
+THRESHOLD=80;
+
+if [ $USAGE_PERCENTAGE -ge $THRESHOLD ]
+then
+    echo "Warning: Disk usage is above $THRESHOLD%. Current usage: $USAGE_PERCENTAGE%"
+else
+    echo "Disk usage ok. Current usage: $USAGE_PERCENTAGE%"
+fi
+
+Output:
+goncalo@DESKTOP-0HE064V:~/scriptstest$ sh shellexec4.sh
+Disk usage ok. Current usage: 1%
+
