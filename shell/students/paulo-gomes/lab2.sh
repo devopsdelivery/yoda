@@ -20,7 +20,7 @@ if [ "$#" -ne 3 ]; then
 fi
 
 # Process each input number
-for i in {1..3}; do
+for i in "$@"; do
     number=${!i}  # Get the i-th argument
     if (( number % 2 == 0 )); then
        	result="even"
