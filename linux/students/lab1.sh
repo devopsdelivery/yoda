@@ -1,28 +1,23 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-# Shebang that tells the system to use bash to interpret the script
-
-## Exercises
+# # Exercises
+# Create a script that will ask the following questions:
 # - What is your first name?
 # - What is your last name?
 # - Where were you born?
 
-# Text formatting (bold and red)
-set -x # Enable debugging
+# And display this output:
+# <h3> Nice to meet you <b>"first name" "last name"</b> from <b>"birth place"</b>!</h3>
+
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
 RESET=$(tput sgr0)
 
-read -p "What's your favorite fruit? " fruit
+# -p flag is used to prompt the user for input
+read -p "What is your first name? " first_name 
+read -p "What is your last name? " last_name
+read -p "Where were you born? " birth_place
 
 echo -n $BOLD
-case $fruit in
-   (apple) echo "An apple a day keeps the doctor away.";;
-  (banana) echo "Bananas are a good source of potassium.";;
-  (cherry) echo "Cherries are a good source of antioxidants.";;
-  (orange) echo "Oranges are a good source of vitamin C.";;
-  (*)echo "I don't like $RED$fruit$RESET.";;
-esac
+echo "Nice to meet you $first_name $last_name from $birth_place!"
 echo -n $RESET
-
-set +x # Disable debugging
