@@ -1,25 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="renamedir"
+mv /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/file1.txt  /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/backup_file1.txt
+mv /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/file2.txt  /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/backup_file2.txt
+mv /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/file3.txt  /root/yoda/shell/students/Xavier-Ricarte-Shell/renamedir/backup_file3.txt
 
-# Check if the directory exists
-if [ ! -d "$DIRECTORY" ]; then
-    echo "Error: Directory '$DIRECTORY' does not exist."
-    exit 1
-fi
-
-# Loop through all files in the directory
-for file in "$DIRECTORY"/*; do
-    # Check if it is a regular file
-    if [ -f "$file" ]; then
-        # Get the base file name
-        base_name=$(basename "$file")
-        # Construct new file name
-        new_name="$DIRECTORY/backup_$base_name"
-        # Rename the file
-        mv "$file" "$new_name"
-        echo "Renamed '$file' to '$new_name'"
-    else
-        echo "'$file' is not a regular file, skipping."
-    fi
-done
