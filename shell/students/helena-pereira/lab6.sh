@@ -1,9 +1,9 @@
 stat= systemctl is-active postgresql
-echo $stat
+inac= "inactive"
 
-if [ $((stat)) = "inactive" ];
-	then systemctl start postgresql
-	echo sustemctl is-active postgresql
+if [ "$stat" = "$inac" ]; then
+	systemctl start postgresql
+	echo 'activating'
+else
+	echo 'Is active already'
 fi
-
-echo $stat
