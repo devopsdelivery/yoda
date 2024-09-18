@@ -1,31 +1,31 @@
 ***
 LAB1
 ***
-#!/bin/sh
+\#!/bin/sh
 
-# Ask the first question
+\# Ask the first question
 echo "What is your first name?"
 read firstname
 
-# Ask the second question
+\# Ask the second question
 echo "What is your last name?"
 read secondname
 
-# Ask the third question
+\# Ask the third question
 echo "Where were you born"
 read place
 
-# Create a string using the answers
+\# Create a string using the answers
 output="Nice to meet you $firstname $secondname from $place."
 
-# Display the output
+\# Display the output
 echo "$output"
 
 ***
 LAB2
 ***
 
-#!/bin/sh
+\#!/bin/sh
 
 if [ "$#" -ne 3 ]; then
             echo "Error: You must provide exactly three numbers."
