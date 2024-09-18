@@ -13,6 +13,11 @@
 # Third number is "even or odd"
 # THE END
 
+# tput is used to set terminal attributes
+# bold is used to set the bold attribute
+# sgr0 is used to reset all attributes
+# setaf is used to set the foreground color using ANSI escape. 
+##	- Each color has a number associated with it
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
