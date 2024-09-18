@@ -1,27 +1,22 @@
 #!/bin/bash
 
-# Function to check resource usage
-check_usage() {
-    CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}')
-    MEM_USAGE=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
-    DISK_USAGE=$(df / | grep / | awk '{ print $5}' | sed 's/%//g')
+# Define the website and log file
+WEBSITE="https://github.com/devopsdelivery/yoda"
+LOG_FILE="website_status.log"
 
-    if (( $(echo "$CPU_USAGE > 80" | bc -l) )); then
-        echo "Warning: CPU usage is above 80%. Current usage: $CPU_USAGE%"
-    fi
+# Use curl to get the HTTP response code
+RESPONSE=$(curl -o /dev/null -s -w "%{http_code}\n" "$WEBSITE")
 
-    if (( $(echo "$MEM_USAGE > 90" | bc -l) )); then
-        echo "Warning: Memory usage is above 90%. Current usage: $MEM_USAGE%"
-    fi
+# Get the current date and time for logging
+CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 
-    if (( $(echo "$DISK_USAGE > 85" | bc -l) )); then
-        echo "Warning: Disk usage is above 85%. Current usage: $DISK_USAGE%"
-    fi
-}
+# Check the HTTP response code
+if [ "$RESPONSE" -eq 200 ]; then
+	    echo "$CURRENT_TIME - Website is up. Response code: $RESPONSE" >> "$LOG_FILE"
+	    echo "website up, saved in logfile"
+    else
+	        echo "$CURRENT_TIME - Website is down. Response code: $RESPONSE" >> "$LOG_FILE"
+		echo "website down, saved in logfile"
+fi
 
-# Limit the number of checks to 5 for testing
-for i in {1..5}; do
-    check_usage
-    sleep 60x  # Wait for 1 minute
-done
 
