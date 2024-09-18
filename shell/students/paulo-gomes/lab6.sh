@@ -9,7 +9,7 @@ LOGFILE="/var/log/postgresql_service.log"
 # Function to log messages
 log_message() {
 	touch "$LOGFILE"
-    echo "$(date +'%Y-%m-%d %H:%M:%S') - $1" >> "$LOGFILE"
+	echo "$(date +'%Y-%m-%d %H:%M:%S') - $1" >> "$LOGFILE"
 }
 
 # Check if PostgreSQL service is running
