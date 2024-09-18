@@ -1,24 +1,21 @@
 #n! /bin/sh
 
-echo "provide 3 numbers"
-read num1
-read num2
-read num3
+check_even_odd() {
+    local number=$1
+    local label=$2
 
-if ((num1 % 2 != 0 )); then
-	echo "First is impar"
-else
-	echo "First number is odd"
-fi
+    if [ $(( number % 2 )) -eq 0 ]; then
+        echo "$label is even"
+    else
+        echo "$label is odd"
+    fi
+}
 
-if ((num2 % 2 != 0 )); then
-        echo "Second number is impar"
-else
-        echo "Second number is odd"
-fi
+number1=$1
+number2=$2
+number3=$3
 
-if ((num3 % 2 != 0 )); then
-        echo "Third number is impar"
-else
-        echo "Third number is odd"
-fi
+check_even_odd "$number1" "First number"
+check_even_odd "$number2" "Second number"
+check_even_odd "$number3" "Third number"
+
