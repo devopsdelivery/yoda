@@ -13,3 +13,6 @@ else
   echo "Disk usage ok. Current usage: $USAGE%"
 fi
 
+
+#set
+
