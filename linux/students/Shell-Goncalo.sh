@@ -44,3 +44,29 @@ the number 1 is odd
 the number 2 is even
 the number 3 is odd
 
+
+## Bash Scripting LAB3
+
+#! /bin/sh
+
+
+DIR=~/renamedir
+
+for file in "$DIR"/*; do
+        BASENAME=$(basename "$file")
+        mv "$file" "$DIR/backup_$BASENAME"
+done
+
+
+echo  "All files have been renamed with the prefix 'backup_'."
+
+ls -l
+
+
+Output:
+goncalo@DESKTOP-0HE064V:~/renamedir$ ./rename.sh
+All files have been renamed with the prefix 'backup_'.
+total 4
+-rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file1.txt
+-rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file2.txt
+-rw-r--r-- 1 goncalo goncalo   0 Sep 18 14:07 backup_file3.txt
