@@ -4,6 +4,8 @@
 WEBSITE="https://github.com/devopsdelivery/yoda"
 LOG_FILE="website_status.log"
 
+touch $LOG_FILE
+
 # Use curl to get the HTTP response code
 RESPONSE=$(curl -o /dev/null -s -w "%{http_code}\n" "$WEBSITE")
 
