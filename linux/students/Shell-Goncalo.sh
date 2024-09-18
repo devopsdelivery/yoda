@@ -93,3 +93,21 @@ Output:
 goncalo@DESKTOP-0HE064V:~/scriptstest$ sh shellexec4.sh
 Disk usage ok. Current usage: 1%
 
+
+## Bash Scripting LAB5
+
+#! /bin/sh
+
+
+DIR=~/replacedir
+
+sed -i 's/ERROR/WARNING/g' "$DIR/replace1.log"
+sed -i 's/ERROR/WARNING/g' "$DIR/replace2.log"
+
+echo "Replaced 'ERROR' with 'WARNING' in both files."
+
+Output:
+goncalo@DESKTOP-0HE064V:~/scriptstest$ sh ./shellexec5.sh
+Replaced 'ERROR' with 'WARNING' in both files.
+
+
