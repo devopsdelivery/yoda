@@ -7,7 +7,7 @@
 # - Where were you born?
 
 # And display this output:
-# <h3> Nice to meet you <b>"first name" "last name"</b> from <b>"birth place"</b>!</h3>
+# Nice to meet you "first name" "last name" from "birth place"!
 
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
