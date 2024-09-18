@@ -111,3 +111,39 @@ goncalo@DESKTOP-0HE064V:~/scriptstest$ sh ./shellexec5.sh
 Replaced 'ERROR' with 'WARNING' in both files.
 
 
+
+## Bash Scripting LAB6
+
+#! /bin/sh
+
+LOGFILE="/var/log/postgresql/postgresql-14-main.log"
+
+if systemctl is-active --quiet postgresql; then
+    echo "PostgreSQL service is running."
+    exit
+else
+    echo "PostgreSQL service is not running."
+    sudo systemctl start postgresql
+    echo "$(date): PostgreSQL service started." >> "$LOGFILE"
+    echo "PostgreSQL service has been started and logged."
+fi
+
+tail -f /var/log/postgresql/postgresql-14-main.log
+
+
+Output:
+goncalo@DESKTOP-0HE064V:/var/log/postgresql$ sh ~/scriptstest/shellexec6.sh
+PostgreSQL service is not running.
+/home/goncalo/scriptstest/shellexec6.sh: 11: cannot create /var/log/postgresql/postgresql-14-main.log: Permission denied
+PostgreSQL service has been started and logged.
+2024-09-18 15:39:42.738 BST [85821] LOG:  received fast shutdown request
+2024-09-18 15:39:42.745 BST [85821] LOG:  aborting any active transactions
+2024-09-18 15:39:42.748 BST [85821] LOG:  background worker "logical replication launcher" (PID 85829) exited with exit code 1
+2024-09-18 15:39:42.748 BST [85824] LOG:  shutting down
+2024-09-18 15:39:42.789 BST [85821] LOG:  database system is shut down
+2024-09-18 15:39:50.657 BST [86862] LOG:  starting PostgreSQL 14.13 (Ubuntu 14.13-0ubuntu0.22.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, 64-bit
+2024-09-18 15:39:50.657 BST [86862] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-09-18 15:39:50.663 BST [86862] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-09-18 15:39:50.677 BST [86863] LOG:  database system was shut down at 2024-09-18 15:39:42 BST
+2024-09-18 15:39:50.688 BST [86862] LOG:  database system is ready to accept connections
+
