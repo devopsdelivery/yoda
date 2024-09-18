@@ -14,4 +14,3 @@ for file in "$directory"/*; do
 					    done
 
 					    echo "Replacement completed."
-
