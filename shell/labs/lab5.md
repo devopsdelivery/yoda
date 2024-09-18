@@ -18,7 +18,7 @@ ERROR: This is other ERROR message
 ```
 
 Now, create a script that will do the following:
-- Replace the specific work (`ERROR`) with another word (`WARNING`) in both files.
+- Replace the specific word (`ERROR`) with another word (`WARNING`) in both files.
 
 
 Next setp: [Lab6](lab6.md)
