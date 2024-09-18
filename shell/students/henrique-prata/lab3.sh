@@ -1,10 +1,8 @@
 #! /bin/sh
-set -x
-for file in '../../../renamedir/'
+
+for file in ../../../renamedir/*
 do
-  if [ -f $file ]
-  then
-    mv $file backup_$file
-  fi
-done 
-set +x
+  filename=$(basename "$file")
+  echo $filename
+  mv ../../../renamedir/$filename ../../../renamedir/backup_$filename
+done
