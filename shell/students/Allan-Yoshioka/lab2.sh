@@ -8,23 +8,23 @@ read third
 
 if [ $((first%2)) -eq 0 ]
 then
-    "First number is even"
+    echo "First number is even"
 else 
-    "First number is odd"
+    echo "First number is odd"
 fi
 
 if [ $((second % 2)) -eq 0 ]
 then
-    "second number is even"
+    echo "Second number is even"
 else 
-    "second number is odd"
+    echo "Second number is odd"
 fi
 
 
 if [ $((third % 2)) -eq 0 ]
 then
-    "Third number is even"
+    echo "Third number is even"
 else 
-    "third number is odd"
+    echo "Third number is odd"
 fi
 
