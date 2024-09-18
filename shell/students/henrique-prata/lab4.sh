@@ -2,7 +2,7 @@
 
 threshold=80
 
-usage=$(df | grep -v Filesystem | while read -r _ _ _ _ usage _; do echo "${usage%?}"; done )
+usage=$(df / | grep / | awk '{print $5}' | sed 's/%//')
 
 if  [ "$usage" -gt "$threshold" ]; then
   echo "Warning: Disk usage is above "$threshold". Current usage: "$usage
