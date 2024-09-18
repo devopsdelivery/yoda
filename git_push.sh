@@ -1,6 +1,6 @@
 #!/bin/bash
 
-current_date=$(date + "%y-%m-%d")
+current_date=$(date +'%Y-%m-%d')
 
 
 git add .
