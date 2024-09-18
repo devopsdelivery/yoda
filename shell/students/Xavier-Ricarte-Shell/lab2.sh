@@ -1,3 +1,4 @@
+#!/bin/bash
 
 check_even_odd() {
     local number=$1
