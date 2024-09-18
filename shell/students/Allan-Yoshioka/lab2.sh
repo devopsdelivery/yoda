@@ -1,14 +1,10 @@
 #! /bin/sh
 
 echo "Gime 3 numerbs!"
-echo "First"
 read first
-
-echo "Second" 
 read second 
-
-echo "Third" 
 read third 
+
 
 if [ $((first%2)) -eq 0 ]
 then
