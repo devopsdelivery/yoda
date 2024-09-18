@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#! /bin/bash
-
 URL="https://github.com/devopsdelivery/yoda"
 
 LOGFILE="curl_log.txt"
