@@ -147,3 +147,28 @@ PostgreSQL service has been started and logged.
 2024-09-18 15:39:50.677 BST [86863] LOG:  database system was shut down at 2024-09-18 15:39:42 BST
 2024-09-18 15:39:50.688 BST [86862] LOG:  database system is ready to accept connections
 
+
+
+## Bash Scripting LAB7
+
+
+#! /bin/sh
+
+
+WEBSITE="https://github.com/devopsdelivery/yoda"
+LOGFILE="website_status.log"
+
+RESPONSE=$(curl -o /dev/null -s -w "%{http_code}\n" "$WEBSITE")
+
+if [ $RESPONSE -eq 200  ];
+then
+    echo "\n There is a connection code - $RESPONSE\n"
+else
+    echo "\n There isn't a connection code - $RESPONSE\n"
+fi
+
+
+Output:
+goncalo@DESKTOP-0HE064V:~$ sh scriptstest/shellexec7.sh
+
+ There is a connection code - 200
