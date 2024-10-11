@@ -15,9 +15,13 @@ Install MySQL Community Edition, create a database, and explore different storag
 - Re-import the CSV file.
 Observe and analyze the results, focusing on how changes are handled.
 Research and compare InnoDB and MyISAM storage engines, explaining their use cases and differences.
-Lab Exercise 2: Backup & Restore, Schema & Logs
-Objective: Perform backup and restore operations, analyze database schemas, and work with log files.
-Tasks:
+
+## Lab Exercise 2: Backup & Restore, Schema & Logs
+
+### Objective: 
+Perform backup and restore operations, analyze database schemas, and work with log files.
+
+### Tasks:
 Create a full backup of the database using mysqldump.
 Restore the backup to a new database.
 Verify the data integrity in the restored database.
