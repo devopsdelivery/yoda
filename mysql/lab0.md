@@ -4,7 +4,7 @@ Welcome to the mysql basics laboratory.
 
 ## Instructions
 
-In order to register your steps and answers to the different exercises that are part of the Linux laboratories:
+In order to register your steps and answers to the different exercises that are part of the mysql laboratories:
 1. Clone this repository to your laptop
 
 ```
@@ -16,7 +16,7 @@ git clone https://github.com/devopsdelivery/yoda.git
 git checkout -b firstname-lastname 
 ```
 
-3. In the folder `/linux/students`create amakedownfile with your name: `FirstName-LastName.md`
+3. In the folder `/mysql/students`create a makedownfile with your name: `FirstName-LastName.md`
 
 4. Use this file to register all the work
 ```
