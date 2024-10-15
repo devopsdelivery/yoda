@@ -1,17 +1,18 @@
-# PostgreSQL LAB1
+# PostgreSQL LAB5
 
-Database Maintenance.
+Monitoring and Process Management
 
 
 ## Goal
-Perform essential database maintenance tasks.
+Learn how to monitor database activity and manage processes.
 
 
 ## Exercise
-- Run `VACUUM` and `ANALYZE` on tables in `test_db`.
-- Explain the purpose and benefits of these commands.
-- Experiment with different `VACUUM` options (e.g., `FULL`).
-- Monitor the impact of maintenance tasks on database performance.
+
+- Use `pg_stat_activity` to view active sessions and queries.
+- Simulate a long-running query.
+- Terminate the query using `pg_cancel_backend` or `pg_terminate_backend`.
+- Discuss the implications of terminating processes.
 
 
-Next setp: [Lab5](lab05.md)
+Next setp: [Lab5](lab06.md)
