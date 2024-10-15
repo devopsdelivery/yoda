@@ -8,7 +8,6 @@ Install PostgreSQL and pgAdmin, create a database, and execute basic SQL command
 
 
 ## Exercise
-- Install PostgreSQL and pgAdmin on your system.
 - Create a database named `test_db`.
 - Connect to `test_db` using psql and pgAdmin.
 - Create a table (e.g., `employees`) with relevant columns.
