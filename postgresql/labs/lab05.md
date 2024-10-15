@@ -1,4 +1,4 @@
-# PostgreSQL LAB5
+# PostgreSQL LAB1
 
 Monitoring and Process Management
 
