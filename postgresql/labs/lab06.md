@@ -1,17 +1,14 @@
 # PostgreSQL LAB1
 
-Database Maintenance.
+Performance Tuning with Indexes
 
 
 ## Goal
-Perform essential database maintenance tasks.
+Understand how indexes improve query performance.
 
 
 ## Exercise
-- Run `VACUUM` and `ANALYZE` on tables in `test_db`.
-- Explain the purpose and benefits of these commands.
-- Experiment with different `VACUUM` options (e.g., `FULL`).
-- Monitor the impact of maintenance tasks on database performance.
-
-
-Next setp: [Lab5](lab05.md)
+- Create an index on a column in `test_db`.
+- Execute queries with and without the index.
+- Use `EXPLAIN ANALYZE` to compare query plans and execution times.
+- Explain the impact of the index on query performance.
