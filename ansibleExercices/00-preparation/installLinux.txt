@@ -1,0 +1,16 @@
+Steps:
+
+#1 Enable WSL:
+Open PowerShell as Administrator and run:
+wsl --install
+
+This installs WSL and the default Ubuntu distribution.
+
+#2 Install Ubuntu:
+After the WSL installation, restart your computer if prompted.
+Open the Microsoft Store and search for "Ubuntu". Install the desired version (e.g., Ubuntu 22.04).
+
+#3 Start Ubuntu:
+Open Ubuntu from the Start menu.
+Complete the setup by creating a username and password.
+You now have a fully functional Linux shell.
