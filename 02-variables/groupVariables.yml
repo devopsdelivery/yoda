@@ -1,0 +1,8 @@
+---
+- name: Hello World with Group Variables
+  hosts: serverGroup1
+  tasks:
+    - name: Show a Group Variable
+      debug:
+        msg: "{{ hello_message }}"
+    

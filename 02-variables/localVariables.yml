@@ -1,0 +1,10 @@
+---
+- name: Exemplo de Hello World com variáveis locais
+  hosts: all
+  vars:
+    hello_message: "Hello World from Playbook"
+  tasks:
+    - name: Show hello_mensagem local variable 
+      debug:
+        msg: "{{ hello_message }}"
+

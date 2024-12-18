@@ -1,0 +1,24 @@
+---
+- name: Modify Apache2 Configuration
+  hosts: localhost
+  become: yes
+  vars:
+    apache_server_name: "www.example.com"
+    apache_document_root: "/var/www/html"
+
+  tasks:
+    - name: Deploy apache2.conf using template
+      template:
+        src: apache2.conf.j2        # The Jinja2 template file
+        dest: /etc/apache2/apache2.conf  # The target location for the file
+        owner: root
+        group: root
+        mode: '0644'
+      notify:
+        - restart apache
+
+  handlers:
+    - name: restart apache
+      service:
+        name: apache2
+        state: restarted

@@ -1,0 +1,12 @@
+---
+- name: Install httpd (Apache) on Ubuntu/Debian
+  hosts: localhost
+  become: yes
+  vars:
+    serviceName: "apache2"
+  tasks:
+    - name: Stop Apache
+      service:
+        name: "{{ serviceName }}"
+        state: stopped
+        enabled: yes

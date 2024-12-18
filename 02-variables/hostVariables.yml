@@ -1,0 +1,8 @@
+---
+- name: Exemplo de Hello World com variáveis de Host
+  hosts: server1
+  tasks:
+    - name: Exibir mensagem de Hello World
+      debug:
+        msg: "{{ hello_message }}"
+

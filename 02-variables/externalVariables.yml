@@ -1,0 +1,9 @@
+---
+- name: Example with external file variables
+  hosts: localhost
+  vars_files:
+    - vars_files/hello_vars.yml
+  tasks:
+    - name: Exibir mensagem de Hello World
+      debug:
+        msg: "{{ hello_message }}"

@@ -1,0 +1,18 @@
+---
+- name: Install httpd (Apache) on Ubuntu/Debian
+  hosts: localhost
+  become: yes
+  vars:
+    serviceName: "apache2"
+  tasks:
+    - name: Install Apache HTTP server
+      apt:
+        name: "{{ serviceName }}"
+        state: present
+        update_cache: yes
+
+    - name: Iniciar e habilitar o serviço Apache
+      service:
+        name: "{{ serviceName }}"
+        state: started
+        enabled: yes

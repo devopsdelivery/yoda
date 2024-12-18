@@ -1,0 +1,16 @@
+---
+- name: Instalar múltiplos pacotes
+  hosts: localhost
+  become: yes
+  vars:
+    packages:
+      - vim
+      - git
+      - wget
+  tasks:
+    - name: Instalar pacotes
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ packages }}"
+      when: ansible_facts.packages[item] is not defined

@@ -1,0 +1,17 @@
+---
+- hosts: all
+  vars:
+    global_var1: "Hello"
+    global_var2: "World!"
+  tasks:
+  - name: Show ansible user (from Inventory)
+    debug:
+      msg: "Connecting with user {{ ansible_user }}"
+
+  - name: Show ssh key (from Inventory)
+    debug:
+      msg: "SSH private key file is located at {{ ansible_ssh_private_key_file }}"
+
+  - name: Show Global Variables (from Playbook)
+    debug:
+      msg: "Returning global variables: {{ global_var1 }} {{ global_var2 }}"
