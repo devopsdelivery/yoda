@@ -1,0 +1,12 @@
+---
+- name: Run a shell command on a remote server
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Run a shell command to list files
+      shell: "ls -l /home/sena/ansible/ansibleExercices/03-playbooks"
+      register: result
+
+    - name: Display the result of the shell command
+      debug:
+        msg: "The output of the command is: {{ result.stdout }}"
