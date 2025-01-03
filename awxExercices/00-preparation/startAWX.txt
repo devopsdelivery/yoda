@@ -1,1 +1,2 @@
+minikube start --vm-driver=docker --addons=ingress
 minikube service awx-ubuntu-service --url -n ansible-awx
