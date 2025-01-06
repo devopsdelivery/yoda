@@ -1,0 +1,17 @@
+ls /
+cd /etc
+pwd
+#sudo apt install tree
+tree /home
+
+mkdir -p /tmp/exercise/subdir
+touch /tmp/exercise/file1.txt /tmp/exercise/file2.txt
+
+ls -l /tmp/exercise/file1.txt
+stat /tmp/exercise/file1.txt
+du -sh /tmp/exercise
+df -h
+
+chmod 600 /tmp/exercise/file1.txt
+ls -l /tmp/exercise/file1.txt
+sudo chown root:sena /tmp/exercise/file2.txt

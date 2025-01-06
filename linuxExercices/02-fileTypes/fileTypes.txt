@@ -1,0 +1,18 @@
+mkdir /tmp/filetypes_dir
+touch /tmp/filetypes_file.txt
+ln -s /tmp/filetypes_file.txt /tmp/filetypes_symlink
+
+ls -l /tmp
+
+file /tmp/filetypes_dir
+file /tmp/filetypes_file.txt
+file /tmp/filetypes_symlink
+
+ln /tmp/filetypes_file.txt /tmp/filetypes_hardlink
+ls -i /tmp/filetypes_file.txt /tmp/filetypes_hardlink
+rm /tmp/filetypes_file.txt
+
+ls -l /dev
+stat /dev/null
+
+rm -r /tmp/filetypes_dir /tmp/filetypes_file.txt /tmp/filetypes_symlink /tmp/filetypes_hardlink
