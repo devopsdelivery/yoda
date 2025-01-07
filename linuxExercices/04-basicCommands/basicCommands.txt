@@ -1,0 +1,17 @@
+cd /tmp
+mkdir test_dir
+ls /tmp
+cd
+
+cd /tmp/test_dir
+cp test_dir ~
+mv myfile.txt myrenamedfile.txt
+rm myrenamedfile.txt
+
+cat /etc/passwd
+head -10 /etc/passwd
+head -10 /etc/passwd | wc -l
+
+ls -l /etc/hosts
+ls -l myfile.txt
+chmod 755 myfile.txt
