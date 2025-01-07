@@ -1,0 +1,11 @@
+whoami
+
+sudo apt update
+sudo su 
+exit
+
+ls -l file.txt
+
+touch file.txt
+sudo chown root:root file.txt
+chmod 755 file.txt
