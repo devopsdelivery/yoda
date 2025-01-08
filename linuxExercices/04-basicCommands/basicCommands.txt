@@ -1,17 +1,13 @@
-cd /tmp
-mkdir test_dir
-ls /tmp
-cd
+pwd
+mkdir ~/training
+cd ~/training
+mkdir projects logs
 
-cd /tmp/test_dir
-cp test_dir ~
-mv myfile.txt myrenamedfile.txt
-rm myrenamedfile.txt
+touch file1.txt
+cp file1.txt file2.txt
+mv file2.txt projects/file2.txt
+rm file1.txt
 
-cat /etc/passwd
-head -10 /etc/passwd
-head -10 /etc/passwd | wc -l
-
-ls -l /etc/hosts
-ls -l myfile.txt
-chmod 755 myfile.txt
+echo -e "line1\nline2\nline3" > projects/sample.txt
+cat projects/sample.txt
+head -n 2 projects/sample.txt

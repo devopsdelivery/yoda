@@ -1,0 +1,4 @@
+man ls
+mkdir –help
+apropos list
+info cp

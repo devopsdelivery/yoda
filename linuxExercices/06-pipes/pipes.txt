@@ -1,0 +1,6 @@
+ls /etc | wc -l
+cat /etc/passwd | grep root
+ls /bin | sort | wc -l
+
+cat /etc/passwd | cut -d: -f1
+du -h /var/log/* | sort -hr | head -5
