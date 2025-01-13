@@ -1,0 +1,8 @@
+
+passwd
+
+sudo adduser testuser
+sudo passwd testuser
+
+sudo passwd -l testuser
+sudo passwd -u testuser

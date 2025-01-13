@@ -1,0 +1,13 @@
+ps aux
+nano
+ps aux | grep nano
+kill <id>
+
+sleep 100 &
+jobs
+fg
+
+crontab -l
+crontab -e
+0 7 * * * /path/to/script.sh
+
