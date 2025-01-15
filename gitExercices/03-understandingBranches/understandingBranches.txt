@@ -1,0 +1,45 @@
+#3.1
+git branch feature/login
+git branch
+
+git checkout feature/login
+git branch
+vi login.html
+git add .
+git commit -m "login.html added"
+git checkout master
+ls -l
+
+#3.2
+git checkout master
+git merge feature/login
+ls -l
+
+git checkout feature/login
+vi login.html
+git add .
+git commit -m "Index.html updated!"
+git checkout master
+vi index.html
+git add .
+git commit -m "Index.html updated!"
+git merge feature/login
+#Fixing conflict
+vi index.html
+git add .
+git commit -m "Index.html fixing conflict resolved!"
+git merge feature/login
+git status
+git log --oneline --graph
+
+#3.3
+git branch -m feature/login feature/authentication
+#local
+cd /home/student/MyProject
+git branch
+#remote
+cd /home/student/MyRemote/Hello-World
+git -a branch
+
+git branch -d feature/authentication
+

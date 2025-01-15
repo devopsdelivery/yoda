@@ -1,0 +1,39 @@
+#2.1
+sudo apt update
+sudo apt install git
+git --version
+
+#2.2
+git config --global user.name "devoSena"
+git config --global user.email "goncalo.sena.costa@devoteam.com"
+git config --list
+
+git config --global core.editor "vim"
+git config --global color.ui auto
+git config --global --edit
+
+#2.3
+mkdir /home/MyRemote
+cd /home/MyRemote
+git clone  https://github.com/octocat/Hello-World
+
+mkdir /home/MyProject
+cd /home/MyProject
+git init
+tree /home/MyProject/.git/
+
+#2.4
+touch example.txt
+git status
+git add example.txt
+git commit -m "Added example.txt"
+git log
+vi notes.txt
+git add notes.txt
+git commit -m "Added notes.txt"
+
+vi notes.txt
+git status
+git add notes.txt
+git commit -m "notes.txt updated"
+git log
