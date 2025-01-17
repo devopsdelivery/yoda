@@ -5,8 +5,8 @@
   tasks:
     - name: Copy a local file to the remote server
       copy:
-        src: /home/sena/ansible/ansibleExercices/03-playbooks/copyFile.yml          # Path to the file on the local machine
-        dest: /home/sena/ansible/ansibleExercices/03-playbooks/copyFile.yml.backup  # Path where the file will be copied on the remote server
+        src: /home/sena/yoda/ansibleExercices/03-playbooks/copyFile.yml          # Path to the file on the local machine
+        dest: /home/sena/yoda/ansibleExercices/03-playbooks/copyFile.yml.backup  # Path where the file will be copied on the remote server
         owner: sena                     # Set file owner (optional)
         group: sena                     # Set file group (optional)
         mode: '0644'                    # Set file permissions (optional)
@@ -17,7 +17,7 @@
 
     - name: Add the current date at the beginning of the destination file
       lineinfile:
-        path: /home/sena/ansible/ansibleExercices/03-playbooks/copyFile.yml.backup  # Destination file
+        path: /home/sena/yoda/ansibleExercices/03-playbooks/copyFile.yml.backup  # Destination file
         line: "# File backup date: {{ current_date }}"                                # Line to add
         insertbefore: BOF                                                           # Insert at the beginning of the file
         create: no    

@@ -1,0 +1,46 @@
+#4.1
+git init
+git remote add origin https://github.com/senaDevo/RemoteDemo.git
+git pull origin main
+git remote -v
+git remote remove origin
+
+git remote show origin
+git remote set-url origin https://github.com/senaDevo/2ndRemoteDemo
+git remote -v
+
+#4.2
+git clone https://github.com/senaDevo/RemoteDemo
+git remote -v
+git fetch origin
+git merge origin/main
+
+git pull origin main
+git log
+git status
+
+#4.3
+mkdir PushDemo
+cd PushDemo
+git clone https://github.com/senaDevo/RemoteDemo
+cd RemoteDemo
+git remote -v
+git branch -a
+git checkout -b feature/update-readme
+
+echo "This is a new update" >> README.md
+touch newfile.log
+git add .
+git commit -m "Updated README with a new line"
+git push origin feature/update-readme
+
+git checkout main
+git merge feature/update-readme
+git push origin main
+
+echo "Conflicting line" >> README.md
+git add README.md
+git commit -m "Add conflicting change"
+git push origin main
+
+

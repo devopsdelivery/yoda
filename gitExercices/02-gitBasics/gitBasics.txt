@@ -37,3 +37,12 @@ git status
 git add notes.txt
 git commit -m "notes.txt updated"
 git log
+
+echo "Another update" >> README.md
+git add README.md
+git commit -m "Added another update at README.md"
+git log
+cat READM.md
+git reset --hard HEAD~1
+git log
+cat README.md
