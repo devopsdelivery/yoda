@@ -1,0 +1,33 @@
+#5.1
+mkdir MyForking
+cd MyForking
+git clone https://github.com/<your-username>/Hello-World.git
+cd Hello-World
+git checkout -b new-feature
+
+touch new-feature.txt
+git add .
+git commit -m "Add new feature description"
+git push origin new-feature
+
+git init
+git remote add origin https://github.com/senaDevo/RemoteDemo.git
+git pull origin main
+git remote -v
+git remote remove origin
+git remote add upstream https://github.com/octocat/Hello-World.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+#git add <file>
+#git commit -m "Resolve conflicts"
+git push origin main
+
+#5.2
+git fetch upstream
+git checkout master
+git merge upstream/master
+git pull origin master
+
+
+
