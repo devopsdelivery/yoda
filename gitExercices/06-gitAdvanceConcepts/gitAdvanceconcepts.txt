@@ -1,0 +1,18 @@
+git init rebase-exercise
+cd rebase-exercise
+echo "Initial commit" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+git branch feature
+echo "Change in master" >> file.txt
+git commit -am "Change in master"
+git checkout feature
+echo "Change in feature" >> file.txt
+git commit -am "Change in feature"
+git checkout feature
+git rebase master
+vi file.txt
+git add file.txt
+git rebase --continue
+git log --oneline
+

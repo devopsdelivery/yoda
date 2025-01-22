@@ -1,26 +1,63 @@
 #2.1
-sudo apt update
-sudo apt install git
-git --version
+#Open a terminal:
+mkdir ~/gitExercices; cd ~/gitExercices
 
-#2.2
-git config --global user.name "devoSena"
-git config --global user.email "goncalo.sena.costa@devoteam.com"
-git config --list
+#Set your name:
+git config --global user.name "Your Name"
 
+#Set your email:
+git config --global user.email "your@email"
+
+#Set your default editor:
 git config --global core.editor "vim"
+
+#Enable colored output:
 git config --global color.ui auto
+
+#Allow the file:// protocol for submodule cloning (needed for 6.3):
+git config --global protocol.file.allow always
+
+#View the configuration file:
 git config --global --edit
 
-#2.3
-mkdir /home/MyRemote
-cd /home/MyRemote
+#Check changes:
+git config --list
+
+#2.2
+Create and access a new local repo remote-project:
+cd ~/gitExercices
+mkdir remote-project; cd remote-project
+
+#Find a sample repository URL (e.g., from GitHub) and clone it:
 git clone  https://github.com/octocat/Hello-World
 
-mkdir /home/MyProject
-cd /home/MyProject
-git init
-tree /home/MyProject/.git/
+#Compare the local repo with the remote.
+git log
+git branch
+git status
+ls -l
+cat Hello-World/README
+
+#Initialize a local repository named local-repo
+cd ~/gitExercices
+git init local-repo
+
+#Check git configurations files:
+tree ~/gitExercices/local-repo/.git
+
+#2.3
+#In local-repo, create a file named example.txt in the repository:
+echo “This is my first file” > example.txt
+
+#Check the status:
+git status
+
+#Stage the file and check status:
+git add example.txt; git status
+
+#Commit the file:
+git commit -m "Adding first file: example.txt"; git status
+
 
 #2.4
 touch example.txt
